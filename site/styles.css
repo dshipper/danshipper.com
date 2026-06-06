@@ -172,6 +172,29 @@ ul.ledger .what .note {
   margin-top: 0.1rem;
 }
 
+/* press lists: outlet as a small eyebrow above the headline */
+ul.ledger .outlet {
+  display: block;
+  font-family: var(--mono);
+  font-size: 0.66rem;
+  font-weight: 500;
+  text-transform: uppercase;
+  letter-spacing: 0.14em;
+  color: var(--faded);
+  margin-bottom: 0.2rem;
+}
+
+ul.ledger.press > li { padding: 0.8rem 0; }
+ul.ledger.press .when { padding-top: 0.18em; }
+ul.ledger.press .what a { font-size: 1.04rem; line-height: 1.35; }
+
+.m-when { display: none; }
+
+@media (max-width: 540px) {
+  ul.ledger.press .when { display: none; }
+  ul.ledger.press .m-when { display: inline; }
+}
+
 @media (max-width: 540px) {
   ul.ledger > li { grid-template-columns: 1fr; }
   ul.ledger .when { padding-top: 0; }

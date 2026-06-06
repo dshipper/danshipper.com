@@ -255,7 +255,7 @@ const pressItems = (press?.items || []).filter(i => i.url_ok !== false);
 if (pressItems.length) {
   const highlights = pressItems.filter(i => i.highlight).slice(0, 14);
   home = home.replace("<!--PRESS_HIGHLIGHTS-->", highlights.map(i =>
-    `<li><span class="when">${esc(yearOf(i.date))}</span><span class="what"><a href="${attr(i.url)}">${esc(i.outlet)}: ${esc(i.title)}</a></span></li>`
+    `<li><span class="when">${esc(yearOf(i.date))}</span><span class="what"><span class="outlet"><span class="m-when" aria-hidden="true">${esc(yearOf(i.date))} · </span>${esc(i.outlet)}</span><a href="${attr(i.url)}">${esc(i.title)}</a></span></li>`
   ).join("\n      "));
 } else {
   home = home.replace("<!--PRESS_HIGHLIGHTS-->", `<li><span class="when">—</span><span class="what">Press list compiling…</span></li>`);
@@ -276,8 +276,8 @@ if (pressItems.length) {
   const sections = [...byY.entries()].map(([year, items]) => `
   <section>
     <h2>${year}</h2>
-    <ul class="ledger">
-${items.map(i => `      <li><span class="when">${esc(fmtMonthYear(i.date))}</span><span class="what"><a href="${attr(i.url)}">${esc(i.outlet)}: ${esc(i.title)}</a>${i.note ? `<span class="note">${esc(i.note)}</span>` : ""}</span></li>`).join("\n")}
+    <ul class="ledger press">
+${items.map(i => `      <li><span class="when">${esc(fmtMonthYear(i.date))}</span><span class="what"><span class="outlet"><span class="m-when" aria-hidden="true">${esc(fmtMonthYear(i.date))} · </span>${esc(i.outlet)}</span><a href="${attr(i.url)}">${esc(i.title)}</a>${i.note ? `<span class="note">${esc(i.note)}</span>` : ""}</span></li>`).join("\n")}
     </ul>
   </section>`).join("\n");
   pressPage = pressPage.replace("<!--PRESS_LIST-->", sections);
