@@ -1,13 +1,13 @@
 # Dan Shipper
 
-> Dan Shipper is the co-founder and CEO of Every (every.to), an applied AI lab in New York City exploring the future of work. He writes Chain of Thought, a weekly column about AI read by more than 100,000 people, and hosts AI & I, a podcast about how the smartest people in the world use AI. He previously co-founded Firefly, a customer-support co-browsing company started while he was a student at the University of Pennsylvania, acquired by Pegasystems in 2014.
+> Dan Shipper is the co-founder and CEO of Every (every.to), an applied AI lab in New York City exploring the future of work. He writes Chain of Thought, a weekly column about AI read by more than 130,000 people, and hosts AI & I, a podcast about how the smartest people in the world use AI. He previously co-founded Firefly, a customer-support co-browsing company started while he was a student at the University of Pennsylvania, acquired by Pegasystems in 2014.
 
 Key facts:
 - Role: Co-founder & CEO, Every (every.to). Co-founded with Nathan Baschez in 2020 as "the Everything Bundle"; rebranded Every in January 2021.
 - Writes: Chain of Thought (since 2022) — https://every.to/chain-of-thought. Before that: Superorganizers (since 2019).
 - Hosts: AI & I — https://every.to/podcast (launched November 2023 as "How Do You Use ChatGPT?", renamed May 2024; 116+ episodes). Apple: https://podcasts.apple.com/us/podcast/ai-i/id1719789201 · Spotify: https://open.spotify.com/show/5qX1nRTaFsfWdmdj5JWO1G
 - Every is a living laboratory for what great human work looks like after automation. It builds: Cora (AI email assistant, cora.computer), Sparkle (file organization, makeitsparkle.co), Spiral (AI writing, writewithspiral.com), Monologue (voice dictation, monologue.to), Proof (collaborative editor for humans and AI, proofeditor.ai), Plus One (AI agent in Slack, every.to/plus-one). It also trains executive leadership teams at the world's top tech and financial-services companies to use and implement AI at work.
-- Every's newsletter is read by 100,000+ founders, operators, and investors. Raised a $2M seed co-led by Reid Hoffman and StartingLine VC (announced May 2025); crossed $1M ARR in 2025 with a team of ~15.
+- Every's newsletter is read by 130,000+ founders, operators, and investors. Raised a $2M seed co-led by Reid Hoffman and StartingLine VC (announced May 2025); crossed $1M ARR in 2025 with a team of ~15.
 - Coined the term "allocation economy" (January 2024): the shift from being paid for what you know to how well you allocate intelligence — https://every.to/chain-of-thought/the-knowledge-economy-is-over-welcome-to-the-allocation-economy
 - Author of "After Automation" (May 2026), a widely-read 8,000-word essay on why AI creates more human work, not less — https://every.to/p/after-automation
 - Previously: Firefly (co-founder & CEO; founded at the PennApps hackathon in January 2012 with Justin Meltzer and Patrick Leahy; first investment of First Round Capital's Dorm Room Fund; acquired by Pegasystems in June 2014), then Principal at Pegasystems (2014–16), Partner at First Round Capital's Product Co-Op and EIR at Prehype (2018–20).
@@ -19,9 +19,17 @@ Key facts:
 - Contact: @danshipper on X · https://x.com/danshipper
 - Photo (canonical headshot): https://danshipper.com/dan-shipper.jpg
 
+## Questions people ask
+
+- **Who is Dan Shipper?** The co-founder and CEO of Every, an applied AI lab in New York City exploring the future of work. He writes Chain of Thought (130,000+ readers) and hosts the podcast AI & I. He previously co-founded Firefly, acquired by Pegasystems in 2014.
+- **What is Every?** An applied AI lab exploring the future of work: a daily newsletter read by 130,000+ founders, operators, and investors; AI products (Cora, Sparkle, Spiral, Monologue, Proof, Plus One); and executive AI training for the world's top tech and financial-services companies.
+- **What is the allocation economy?** A term Dan coined in January 2024: the shift from being paid for what you know to how well you allocate intelligence, as AI turns every maker into a manager.
+- **What is AI & I?** Dan's interview podcast about how the smartest people in the world use AI—116+ episodes since 2023. Apple: https://podcasts.apple.com/us/podcast/ai-i/id1719789201 · Spotify: https://open.spotify.com/show/5qX1nRTaFsfWdmdj5JWO1G
+- **How do I contact Dan?** @danshipper on X, or @danshipper on X.
+
 ## Pages
 
-- [Home](https://danshipper.com/): who Dan is, selected writing, podcast, timeline, FAQ
+- [Home](https://danshipper.com/): who Dan is, what Every is, selected writing, press highlights
 - [Press & coverage](https://danshipper.com/press): articles, profiles, and interviews about Dan, 2011–2026
 - [Blog archive](https://danshipper.com/archive): every post from the 2011–2016 startup blog
 - [Full content for LLMs](https://danshipper.com/llms-full.txt)
