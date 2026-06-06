@@ -1,36 +1,34 @@
-/* danshipper.com — quiet editorial. One column, set in Newsreader. */
+/* danshipper.com — white paper, Signifier Light, the blue.
+   A modernized continuation of the old site's look (Emptiness theme, 2017). */
 
 @font-face {
-  font-family: "Newsreader";
-  src: url("/fonts/newsreader-roman-v2.woff2") format("woff2");
-  font-weight: 200 800;
+  font-family: "Signifier";
+  src: url("/fonts/signifier-light.woff2") format("woff2");
+  font-weight: 300;
   font-style: normal;
-  font-display: swap;
-}
-@font-face {
-  font-family: "Newsreader";
-  src: url("/fonts/newsreader-italic-v2.woff2") format("woff2");
-  font-weight: 200 800;
-  font-style: italic;
   font-display: swap;
 }
 
 :root {
-  --paper: #fbf9f4;
-  --ink: #1c1a17;
-  --faded: #6e675c;
-  --accent: #963421;
-  --rule: #e6e0d3;
+  --paper: #ffffff;
+  --ink: #474747;
+  --strong: #222222;
+  --faded: #8f8f8f;
+  --accent: #0578cd;        /* body links — AA on white */
+  --accent-bright: #0599ff; /* the old site's blue — hovers & large accents */
+  --rule: #e9e9e9;
   --mono: ui-monospace, "SF Mono", SFMono-Regular, Menlo, monospace;
 }
 
 @media (prefers-color-scheme: dark) {
   :root {
-    --paper: #181511;
-    --ink: #e9e3d6;
-    --faded: #9a917f;
-    --accent: #d8765a;
-    --rule: #322d25;
+    --paper: #141619;
+    --ink: #c6c9ce;
+    --strong: #eef0f2;
+    --faded: #84888f;
+    --accent: #58b0f6;
+    --accent-bright: #79c2ff;
+    --rule: #2a2d31;
   }
 }
 
@@ -39,10 +37,11 @@
 html {
   background: var(--paper);
   color: var(--ink);
-  font-family: "Newsreader", Georgia, "Times New Roman", serif;
-  font-optical-sizing: auto;
-  font-size: clamp(17px, 1.05vw + 13px, 20px);
-  line-height: 1.55;
+  font-family: "Signifier", "Iowan Old Style", Georgia, "Times New Roman", serif;
+  font-weight: 300;
+  font-synthesis-weight: none;
+  font-size: clamp(18px, 1.05vw + 14px, 20px);
+  line-height: 1.62;
   -webkit-text-size-adjust: 100%;
 }
 
@@ -67,61 +66,59 @@ main {
 /* ---------- type ---------- */
 
 h1 {
-  font-size: clamp(2.6rem, 8vw, 4.25rem);
-  font-weight: 480;
-  line-height: 1.02;
-  letter-spacing: -0.015em;
+  font-size: clamp(2.5rem, 7.5vw, 4rem);
+  font-weight: 300;
+  line-height: 1.05;
+  letter-spacing: -0.01em;
+  color: var(--strong);
   margin: 0 0 1.75rem;
 }
 
 h2 {
-  font-size: 0.78rem;
-  font-family: var(--mono);
-  font-weight: 500;
-  text-transform: uppercase;
-  letter-spacing: 0.14em;
-  color: var(--faded);
+  font-size: 1.35rem;
+  font-weight: 300;
+  color: var(--strong);
   margin: 0 0 1.25rem;
 }
 
 h3 {
-  font-size: 1.05rem;
-  font-weight: 600;
+  font-size: 1.1rem;
+  font-weight: 300;
+  color: var(--strong);
   margin: 1.5rem 0 0.25rem;
 }
 
 p { margin: 0 0 1.1rem; }
 
+b, strong { font-weight: 300; color: var(--strong); }
+
 section {
-  margin-top: 4.25rem;
-  padding-top: 1.5rem;
+  margin-top: 4rem;
+  padding-top: 1.75rem;
   border-top: 1px solid var(--rule);
 }
 
 .lede {
-  font-size: 1.16rem;
-  line-height: 1.5;
+  font-size: 1.17rem;
+  line-height: 1.55;
 }
-
-em, i { font-style: italic; }
 
 small, .small { font-size: 0.85rem; color: var(--faded); }
 
-/* ---------- links ---------- */
+/* ---------- links: the blue ---------- */
 
 a {
-  color: inherit;
+  color: var(--accent);
   text-decoration: underline;
-  text-decoration-color: color-mix(in srgb, var(--accent) 55%, transparent);
+  text-decoration-color: color-mix(in srgb, var(--accent) 35%, transparent);
   text-decoration-thickness: 1px;
   text-underline-offset: 0.16em;
-  transition: text-decoration-color 120ms ease, color 120ms ease;
+  transition: color 120ms ease, text-decoration-color 120ms ease;
 }
 
 a:hover {
-  color: var(--accent);
-  text-decoration-color: var(--accent);
-  text-decoration-thickness: 1.5px;
+  color: var(--accent-bright);
+  text-decoration-color: var(--accent-bright);
 }
 
 a:focus-visible {
@@ -130,6 +127,8 @@ a:focus-visible {
   border-radius: 1px;
   text-decoration: none;
 }
+
+nav.crumb a, footer a { color: var(--accent); }
 
 /* ---------- lists with date gutters ---------- */
 
@@ -142,20 +141,18 @@ ul.ledger {
 ul.ledger > li {
   display: grid;
   grid-template-columns: 4.75rem 1fr;
-  gap: 0 1rem;
+  gap: 0 1.1rem;
   padding: 0.55rem 0;
 }
 
 ul.ledger .when {
   font-family: var(--mono);
-  font-size: 0.72rem;
+  font-size: 0.7rem;
   color: var(--faded);
-  padding-top: 0.35em;
+  padding-top: 0.45em;
   white-space: nowrap;
   font-variant-numeric: tabular-nums;
 }
-
-ul.ledger .what a { font-weight: 540; }
 
 ul.ledger .what .note {
   display: block;
@@ -173,7 +170,6 @@ ul.ledger .what .note {
 
 .faq h3 { margin-top: 1.6rem; }
 .faq h3:first-of-type { margin-top: 0; }
-.faq p { color: color-mix(in srgb, var(--ink) 88%, var(--faded)); }
 
 /* ---------- header / footer ---------- */
 
@@ -200,13 +196,13 @@ footer p { margin: 0.3rem 0; }
 article.archived { margin-top: 1rem; }
 
 article.archived h1 {
-  font-size: clamp(1.9rem, 5vw, 2.7rem);
-  line-height: 1.12;
+  font-size: clamp(1.9rem, 5vw, 2.6rem);
+  line-height: 1.15;
 }
 
 .archive-note {
   font-family: var(--mono);
-  font-size: 0.72rem;
+  font-size: 0.7rem;
   text-transform: uppercase;
   letter-spacing: 0.12em;
   color: var(--faded);
@@ -215,6 +211,6 @@ article.archived h1 {
 
 article.archived img { max-width: 100%; height: auto; }
 article.archived pre { overflow-x: auto; font-size: 0.85rem; padding: 0.75rem; border: 1px solid var(--rule); }
-article.archived blockquote { margin: 1.2rem 0; padding-left: 1rem; border-left: 2px solid var(--accent); color: var(--faded); font-style: italic; }
+article.archived blockquote { margin: 1.2rem 0; padding-left: 1rem; border-left: 2px solid var(--accent-bright); color: var(--faded); }
 
 hr { border: 0; border-top: 1px solid var(--rule); margin: 2.5rem 0; }

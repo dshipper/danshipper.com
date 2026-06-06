@@ -4,6 +4,7 @@
 
 import fs from "node:fs";
 import path from "node:path";
+import crypto from "node:crypto";
 import { fileURLToPath } from "node:url";
 
 const ROOT = path.resolve(path.dirname(fileURLToPath(import.meta.url)), "..");
@@ -326,6 +327,19 @@ const assetReport = await mirrorAssets();
 if (fs.existsSync(ASSET_CACHE)) {
   fs.cpSync(ASSET_CACHE, DIST, { recursive: true });
 }
+
+// 9) cache-bust the stylesheet everywhere (browsers cache /styles.css across deploys)
+const cssHash = crypto.createHash("sha1").update(fs.readFileSync(path.join(DIST, "styles.css"))).digest("hex").slice(0, 8);
+(function bust(dir) {
+  for (const e of fs.readdirSync(dir, { withFileTypes: true })) {
+    const p = path.join(dir, e.name);
+    if (e.isDirectory()) bust(p);
+    else if (e.name.endsWith(".html")) {
+      const h = fs.readFileSync(p, "utf8");
+      fs.writeFileSync(p, h.replace(/href="\/styles\.css"/g, `href="/styles.css?v=${cssHash}"`));
+    }
+  }
+})(DIST);
 
 // ---------- report ----------
 console.log(`posts: ${postEntries.length} archive pages`);
