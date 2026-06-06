@@ -2,6 +2,16 @@
   "compiled_at": "2026-06-06",
   "items": [
     {
+      "date": "2026-05-30",
+      "outlet": "Business Insider",
+      "title": "An AI CEO Explains How Much He Spent on Codex Last Month",
+      "url": "https://www.businessinsider.com/ai-ceo-codex-dan-shipper-every-2026-5",
+      "type": "article",
+      "note": "On Every's agent-heavy workflow and what it actually costs.",
+      "highlight": false,
+      "url_ok": true
+    },
+    {
       "date": "2026-05-24",
       "outlet": "Lenny's Podcast",
       "title": "The AI paradox: More automation, more humans, more work | Dan Shipper",
@@ -18,16 +28,6 @@
       "url": "https://www.tbpndigest.com/story/2026-05-22/dan-shipper-on-codex-as-daily-driver-every-agent-needs-a-human-and-ai-is-actually-increasing-demand-for-experts/transcript",
       "type": "podcast",
       "note": "Guest segment on the TBPN live tech show (John Coogan & Jordi Hays) discussing After Automation; transcript via TBPN Digest.",
-      "highlight": false,
-      "url_ok": true
-    },
-    {
-      "date": "2026-05",
-      "outlet": "Business Insider",
-      "title": "An AI CEO Explains How Much He Spent on Codex Last Month",
-      "url": "https://www.businessinsider.com/ai-ceo-codex-dan-shipper-every-2026-5",
-      "type": "article",
-      "note": "On Every's agent-heavy workflow and what it actually costs.",
       "highlight": false,
       "url_ok": true
     },
@@ -102,7 +102,7 @@
       "url_ok": true
     },
     {
-      "date": "2025-10",
+      "date": "2025-10-08",
       "outlet": "Business Insider",
       "title": "AI Status Symbols Are Popping Up Everywhere",
       "url": "https://www.businessinsider.com/ai-status-symbols-openai-anthropic-cursor-2025-10",
@@ -242,22 +242,22 @@
       "url_ok": true
     },
     {
+      "date": "2020-11-24",
+      "outlet": "Business Insider",
+      "title": "How to Make a Living on Substack: Diversify Your Revenue",
+      "url": "https://www.businessinsider.com/can-you-make-a-living-on-substack-full-time-2020-9",
+      "type": "article",
+      "note": "Quoted on building the Everything bundle in the Substack era.",
+      "highlight": false,
+      "url_ok": true
+    },
+    {
       "date": "2020-09-18",
       "outlet": "A Media Operator",
       "title": "Dan Shipper & Nathan Baschez on Building Everything",
       "url": "https://www.amediaoperator.com/podcast/podcast-dan-shipper-and-nathan-baschez/",
       "type": "podcast",
       "note": "Jacob Cohen Donnelly's media-business podcast on the Everything bundle's subscription strategy.",
-      "highlight": false,
-      "url_ok": true
-    },
-    {
-      "date": "2020-09",
-      "outlet": "Business Insider",
-      "title": "How to Make a Living on Substack: Diversify Your Revenue",
-      "url": "https://www.businessinsider.com/can-you-make-a-living-on-substack-full-time-2020-9",
-      "type": "article",
-      "note": "Quoted on building the Everything bundle in the Substack era.",
       "highlight": false,
       "url_ok": true
     },
@@ -332,22 +332,22 @@
       "url_ok": true
     },
     {
+      "date": "2014-06-09",
+      "outlet": "Business Insider",
+      "title": "Firefly Acquired by Pegasystems",
+      "url": "https://www.businessinsider.com/firefly-gets-acquired-by-pegasus-2014-6",
+      "type": "article",
+      "note": "BI's coverage of the exit.",
+      "highlight": false,
+      "url_ok": true
+    },
+    {
       "date": "2014-06",
       "outlet": "The Philadelphia Inquirer (PhillyDeals)",
       "title": "Dorm Room Fund's Firefly Sold to Pegasystems",
       "url": "https://www.inquirer.com/philly/blogs/inq-phillydeals/Dorm-Room-Funds-Firefly-.html",
       "type": "article",
       "note": "Hometown business-press coverage of the first Dorm Room Fund exit.",
-      "highlight": false,
-      "url_ok": true
-    },
-    {
-      "date": "2014-06",
-      "outlet": "Business Insider",
-      "title": "Firefly Acquired by Pegasystems",
-      "url": "https://www.businessinsider.com/firefly-gets-acquired-by-pegasus-2014-6",
-      "type": "article",
-      "note": "BI's coverage of the exit.",
       "highlight": false,
       "url_ok": true
     },
@@ -482,7 +482,7 @@
       "url_ok": true
     },
     {
-      "date": "2012-06",
+      "date": "2012-06-04",
       "outlet": "Business Insider",
       "title": "These Kids Became Stars in Tech Before They Turned 20",
       "url": "https://www.businessinsider.com/these-kids-became-stars-in-tech-before-they-turned-20-2012-6",
@@ -492,7 +492,7 @@
       "url_ok": true
     },
     {
-      "date": "2012-05",
+      "date": "2012-05-21",
       "outlet": "Business Insider",
       "title": "Startups Are Flinging Job Offers at Dan Shipper, but the 20-Year-Old Philosophy Major Would Rather Stay at UPenn",
       "url": "https://www.businessinsider.com/startups-are-flinging-job-offers-at-dan-shipper-but-the-20-year-old-philosphy-major-rould-rather-stay-at-upenn-2012-5",
@@ -502,7 +502,7 @@
       "url_ok": true
     },
     {
-      "date": "2012-05",
+      "date": "2012-05-04",
       "outlet": "Business Insider",
       "title": "42Floors Is Recruiting Dan Shipper",
       "url": "https://www.businessinsider.com/42-floors-recruiting-dan-shipper-2012-5",
