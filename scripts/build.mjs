@@ -253,7 +253,7 @@ if (timeline?.items) {
 
 const pressItems = (press?.items || []).filter(i => i.url_ok !== false);
 if (pressItems.length) {
-  const highlights = pressItems.filter(i => i.highlight).slice(0, 10);
+  const highlights = pressItems.filter(i => i.highlight).slice(0, 14);
   home = home.replace("<!--PRESS_HIGHLIGHTS-->", highlights.map(i =>
     `<li><span class="when">${esc(yearOf(i.date))}</span><span class="what"><a href="${attr(i.url)}">${esc(i.outlet)}: ${esc(i.title)}</a></span></li>`
   ).join("\n      "));

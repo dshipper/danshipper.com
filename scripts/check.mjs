@@ -80,7 +80,7 @@ console.log(`structural errors: ${errors.length}`);
 errors.forEach(e => console.log("  ERROR " + e));
 
 // Domains that block scripted clients but are confirmed live in real browsers.
-const BOT_WALLED = ["inc.com", "axios.com", "bigthink.com", "entrepreneur.com", "linkedin.com", "x.com", "twitter.com", "finance.yahoo.com"];
+const BOT_WALLED = ["inc.com", "axios.com", "bigthink.com", "entrepreneur.com", "linkedin.com", "x.com", "twitter.com", "finance.yahoo.com", "newyorker.com", "nytimes.com"];
 const isBotWalled = url => BOT_WALLED.some(d => new URL(url).hostname.endsWith(d));
 
 if (CHECK_EXTERNAL) {

@@ -2,26 +2,6 @@
   "compiled_at": "2026-06-06",
   "items": [
     {
-      "date": "2026-05-28",
-      "outlet": "24/7 Wall St.",
-      "title": "'Automation Is a Lie,' Says AI Founder Whose Company Doubled Headcount Despite Heavy AI Use",
-      "url": "https://247wallst.com/investing/2026/05/28/automation-is-a-lie-says-ai-founder-whose-company-doubled-headcount-despite-heavy-ai-use/",
-      "type": "article",
-      "note": "News piece on Shipper's 'After Automation' thesis: Every doubled headcount to ~30 while automating heavily with AI.",
-      "highlight": false,
-      "url_ok": true
-    },
-    {
-      "date": "2026-05-26",
-      "outlet": "36Kr (Chinese tech press)",
-      "title": "Every CEO Dan Shipper: Stop Focusing on the Interface — Whoever Controls the Backend Data Has the Final Say",
-      "url": "https://eu.36kr.com/en/p/3825254789698182",
-      "type": "interview",
-      "note": "Chinese tech-press interview compilation on After Automation, forward-deployed engineers, and the future of SaaS.",
-      "highlight": false,
-      "url_ok": true
-    },
-    {
       "date": "2026-05-24",
       "outlet": "Lenny's Podcast",
       "title": "The AI paradox: More automation, more humans, more work | Dan Shipper",
@@ -42,12 +22,22 @@
       "url_ok": true
     },
     {
+      "date": "2026-05",
+      "outlet": "Business Insider",
+      "title": "An AI CEO Explains How Much He Spent on Codex Last Month",
+      "url": "https://www.businessinsider.com/ai-ceo-codex-dan-shipper-every-2026-5",
+      "type": "article",
+      "note": "On Every's agent-heavy workflow and what it actually costs.",
+      "highlight": false,
+      "url_ok": true
+    },
+    {
       "date": "2026-03-28",
       "outlet": "The New York Times",
       "title": "Smaller Is Better in Silicon Valley's 'Tiny Team' Moment",
-      "url": "https://www.seattletimes.com/explore/careers/smaller-is-better-in-silicon-valleys-tiny-team-moment/",
+      "url": "https://www.nytimes.com/2026/03/28/business/silicon-valley-tiny-team-two-slice.html",
       "type": "article",
-      "note": "Lora Kelley on the tiny-team era, where Dan coins the “two-slice team”: one person plus AI. (Linked via syndication.)",
+      "note": "Lora Kelley on the tiny-team era, where Dan coins the “two-slice team”: one person plus AI.",
       "highlight": true,
       "url_ok": true
     },
@@ -58,7 +48,7 @@
       "url": "https://www.axios.com/2026/01/13/anthropic-claude-code-cowork-vibe-coding",
       "type": "article",
       "note": "Shipper quoted on Anthropic's Claude Cowork (built using its own vibe-coding workflow in a week and a half) — tells Axios he has 'a handful of small complaints — which are really just feature requests.' Axios 403s scripts; confirmed via search snippets.",
-      "highlight": false,
+      "highlight": true,
       "url_ok": true
     },
     {
@@ -68,7 +58,7 @@
       "url": "https://www.axios.com/2026/01/07/anthropics-claude-code-vibe-coding",
       "type": "article",
       "note": "Shipper quoted at length as the primary expert voice — calls Claude Code an 'infinite vibe coding machine' and says it gives 'one engineer the productivity of four or five.' Axios bot-walls scripts (403) but Shipper quotes confirmed via multiple search snippets and inkl.com mirror.",
-      "highlight": false,
+      "highlight": true,
       "url_ok": true
     },
     {
@@ -79,6 +69,16 @@
       "type": "video",
       "note": "Big Think full-length filmed interview on LLMs, intuition, and the limits of rationalism; companion cut 'Thinking too logically can actually hold you back' (bigthink.com/series/the-big-think-interview/limits-of-rationalism/); also on Big Think's YouTube.",
       "highlight": false,
+      "url_ok": true
+    },
+    {
+      "date": "2025-11-11",
+      "outlet": "The New Yorker",
+      "title": "Why Can't A.I. Manage My E-Mail?",
+      "url": "https://www.newyorker.com/culture/open-questions/why-cant-ai-manage-my-e-mails",
+      "type": "article",
+      "note": "Cal Newport puts Cora—Every's email assistant—through its paces and asks whether solving email is the new Turing test.",
+      "highlight": true,
       "url_ok": true
     },
     {
@@ -99,6 +99,16 @@
       "type": "profile",
       "note": "Long-form founder profile tracing Firefly through Every's media-plus-software model (Cora, Sparkle, Spiral, Lex) and his OCD diagnosis.",
       "highlight": true,
+      "url_ok": true
+    },
+    {
+      "date": "2025-10",
+      "outlet": "Business Insider",
+      "title": "AI Status Symbols Are Popping Up Everywhere",
+      "url": "https://www.businessinsider.com/ai-status-symbols-openai-anthropic-cursor-2025-10",
+      "type": "article",
+      "note": "Quoted on AI tools as the new status markers.",
+      "highlight": false,
       "url_ok": true
     },
     {
@@ -232,6 +242,16 @@
       "url_ok": true
     },
     {
+      "date": "2020-09",
+      "outlet": "Business Insider",
+      "title": "How to Make a Living on Substack: Diversify Your Revenue",
+      "url": "https://www.businessinsider.com/can-you-make-a-living-on-substack-full-time-2020-9",
+      "type": "article",
+      "note": "Quoted on building the Everything bundle in the Substack era.",
+      "highlight": false,
+      "url_ok": true
+    },
+    {
       "date": "2017-01-04",
       "outlet": "CNNMoney",
       "title": "Celebrity-Filled Telethon Set for Facebook Live on Inauguration Day",
@@ -312,6 +332,16 @@
       "url_ok": true
     },
     {
+      "date": "2014-06",
+      "outlet": "Business Insider",
+      "title": "Firefly Acquired by Pegasystems",
+      "url": "https://www.businessinsider.com/firefly-gets-acquired-by-pegasus-2014-6",
+      "type": "article",
+      "note": "BI's coverage of the exit.",
+      "highlight": false,
+      "url_ok": true
+    },
+    {
       "date": "2014-01-29",
       "outlet": "Mixergy",
       "title": "How Firefly's Founder Bootstrapped a 6-Figure Business from School",
@@ -323,9 +353,9 @@
     },
     {
       "date": "2013-07-30",
-      "outlet": "Business Insider (via Yahoo Finance)",
+      "outlet": "Business Insider",
       "title": "What It's Like to Be a College Kid with a Profitable Side Business That Pulls in 6 Figures",
-      "url": "https://finance.yahoo.com/news/college-kid-running-profitable-side-210538291.html",
+      "url": "https://www.businessinsider.com/dan-shipper-on-firefly-2013-7",
       "type": "profile",
       "note": "Alyson Shontell's Business Insider profile of Shipper balancing senior year at Penn with a six-figure startup; original BI URL no longer live, Yahoo syndication resolves.",
       "highlight": false,
@@ -438,6 +468,36 @@
       "url": "https://technical.ly/uncategorized/firefly-dorm-room-fund-20k-investment-penn-undergrad-startup/",
       "type": "article",
       "note": "Technically Philly on the Dorm Room Fund's first investment, with Shipper on taking 'money on our own terms.'",
+      "highlight": false,
+      "url_ok": true
+    },
+    {
+      "date": "2012-06",
+      "outlet": "Business Insider",
+      "title": "These Kids Became Stars in Tech Before They Turned 20",
+      "url": "https://www.businessinsider.com/these-kids-became-stars-in-tech-before-they-turned-20-2012-6",
+      "type": "article",
+      "note": "Featured among tech's under-20 standouts.",
+      "highlight": false,
+      "url_ok": true
+    },
+    {
+      "date": "2012-05",
+      "outlet": "Business Insider",
+      "title": "Startups Are Flinging Job Offers at Dan Shipper, but the 20-Year-Old Philosophy Major Would Rather Stay at UPenn",
+      "url": "https://www.businessinsider.com/startups-are-flinging-job-offers-at-dan-shipper-but-the-20-year-old-philosphy-major-rould-rather-stay-at-upenn-2012-5",
+      "type": "profile",
+      "note": "The public job-offer saga: startups courting a college sophomore who wouldn't drop out.",
+      "highlight": true,
+      "url_ok": true
+    },
+    {
+      "date": "2012-05",
+      "outlet": "Business Insider",
+      "title": "42Floors Is Recruiting Dan Shipper",
+      "url": "https://www.businessinsider.com/42-floors-recruiting-dan-shipper-2012-5",
+      "type": "article",
+      "note": "The job offer that kicked off the saga.",
       "highlight": false,
       "url_ok": true
     },
