@@ -53,6 +53,27 @@ main {
   }
 }
 
+/* ---------- hero ---------- */
+
+header.hero {
+  display: grid;
+  grid-template-columns: 1fr 11.5rem;
+  gap: 0 2.25rem;
+  align-items: start;
+}
+
+img.portrait {
+  width: 100%;
+  height: auto;
+  border-radius: 3px;
+  margin-top: 0.9rem;
+}
+
+@media (max-width: 600px) {
+  header.hero { grid-template-columns: 1fr; }
+  img.portrait { width: 8.5rem; order: -1; margin: 0 0 1.5rem; }
+}
+
 /* ---------- type ---------- */
 
 h1 {
