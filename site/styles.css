@@ -1,5 +1,6 @@
 /* danshipper.com — white paper, Signifier Light, the blue.
-   A modernized continuation of the old site's look (Emptiness theme, 2017). */
+   A modernized continuation of the old site's look (Emptiness theme, 2017).
+   Always light — like the old site. */
 
 @font-face {
   font-family: "Signifier";
@@ -20,21 +21,10 @@
   --mono: ui-monospace, "SF Mono", SFMono-Regular, Menlo, monospace;
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --paper: #141619;
-    --ink: #c6c9ce;
-    --strong: #eef0f2;
-    --faded: #84888f;
-    --accent: #58b0f6;
-    --accent-bright: #79c2ff;
-    --rule: #2a2d31;
-  }
-}
-
 * { box-sizing: border-box; }
 
 html {
+  color-scheme: light only;
   background: var(--paper);
   color: var(--ink);
   font-family: "Signifier", "Iowan Old Style", Georgia, "Times New Roman", serif;
