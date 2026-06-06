@@ -1,0 +1,445 @@
+{
+  "compiled_at": "2026-06-06",
+  "items": [
+    {
+      "date": "2026-05-28",
+      "outlet": "24/7 Wall St.",
+      "title": "'Automation Is a Lie,' Says AI Founder Whose Company Doubled Headcount Despite Heavy AI Use",
+      "url": "https://247wallst.com/investing/2026/05/28/automation-is-a-lie-says-ai-founder-whose-company-doubled-headcount-despite-heavy-ai-use/",
+      "type": "article",
+      "note": "News piece on Shipper's 'After Automation' thesis: Every doubled headcount to ~30 while automating heavily with AI.",
+      "highlight": false,
+      "url_ok": true
+    },
+    {
+      "date": "2026-05-26",
+      "outlet": "36Kr (Chinese tech press)",
+      "title": "Every CEO Dan Shipper: Stop Focusing on the Interface — Whoever Controls the Backend Data Has the Final Say",
+      "url": "https://eu.36kr.com/en/p/3825254789698182",
+      "type": "interview",
+      "note": "Chinese tech-press interview compilation on After Automation, forward-deployed engineers, and the future of SaaS.",
+      "highlight": false,
+      "url_ok": true
+    },
+    {
+      "date": "2026-05-24",
+      "outlet": "Lenny's Podcast",
+      "title": "The AI paradox: More automation, more humans, more work | Dan Shipper",
+      "url": "https://www.lennysnewsletter.com/p/the-ai-paradox-dan-shipper",
+      "type": "podcast",
+      "note": "Second Lenny's appearance, pegged to the 'After Automation' report — why automation creates more human work, not less.",
+      "highlight": true,
+      "url_ok": true
+    },
+    {
+      "date": "2026-05-22",
+      "outlet": "TBPN",
+      "title": "Dan Shipper on Codex as Daily Driver: Every Agent Needs a Human, and AI Is Actually Increasing Demand for Experts",
+      "url": "https://www.tbpndigest.com/story/2026-05-22/dan-shipper-on-codex-as-daily-driver-every-agent-needs-a-human-and-ai-is-actually-increasing-demand-for-experts/transcript",
+      "type": "podcast",
+      "note": "Guest segment on the TBPN live tech show (John Coogan & Jordi Hays) discussing After Automation; transcript via TBPN Digest.",
+      "highlight": false,
+      "url_ok": true
+    },
+    {
+      "date": "2025-11-21",
+      "outlet": "Big Think",
+      "title": "How Large Language Models View Our World — Dan Shipper: Full Interview",
+      "url": "https://bigthink.com/series/full-interview/human-intuition-ai/",
+      "type": "video",
+      "note": "Big Think full-length filmed interview on LLMs, intuition, and the limits of rationalism; companion cut 'Thinking too logically can actually hold you back' (bigthink.com/series/the-big-think-interview/limits-of-rationalism/); also on Big Think's YouTube.",
+      "highlight": false,
+      "url_ok": true
+    },
+    {
+      "date": "2025-10-30",
+      "outlet": "Mixergy",
+      "title": "How Dan Shipper Uses AI to Build Artisanal AI Apps",
+      "url": "https://mixergy.com/interviews/how-dan-shipper-uses-ai-to-build-artisanal-ai-apps/",
+      "type": "interview",
+      "note": "Andrew Warner interviews Shipper a second time, 11 years after the Firefly episode — on Every's taste-driven AI products (~$1.3M ARR).",
+      "highlight": false,
+      "url_ok": true
+    },
+    {
+      "date": "2025-10-20",
+      "outlet": "Mercury",
+      "title": "What Comes Next? Dan Shipper Is Figuring It Out",
+      "url": "https://mercury.com/blog/what-comes-next-dan-shipper-every",
+      "type": "profile",
+      "note": "Long-form founder profile tracing Firefly through Every's media-plus-software model (Cora, Sparkle, Spiral, Lex) and his OCD diagnosis.",
+      "highlight": true,
+      "url_ok": true
+    },
+    {
+      "date": "2025-09-05",
+      "outlet": "Upstarts Media",
+      "title": "'Give Time to Take Risks': Every's CEO on AI and Trying New Tools",
+      "url": "https://www.upstartsmedia.com/p/media-ai-every-richard-branson",
+      "type": "interview",
+      "note": "Alex Konrad interviews Shipper (aboard a Virgin Voyages event with Richard Branson) on running an AI-first 15-person company.",
+      "highlight": false,
+      "url_ok": true
+    },
+    {
+      "date": "2025-07-17",
+      "outlet": "Lenny's Podcast",
+      "title": "The AI-native startup: 5 products, 7-figure revenue, 100% AI-written code | Dan Shipper (co-founder/CEO of Every)",
+      "url": "https://www.lennysnewsletter.com/p/inside-every-dan-shipper",
+      "type": "podcast",
+      "note": "Breakout AI-era appearance: how Every ships five products with AI agents writing virtually all code.",
+      "highlight": true,
+      "url_ok": true
+    },
+    {
+      "date": "2025-05-26",
+      "outlet": "FinSMEs",
+      "title": "Every Raises $2M in Seed Funding",
+      "url": "https://www.finsmes.com/2025/05/every-raises-2m-in-seed-funding.html",
+      "type": "article",
+      "note": "Funding coverage of Every's $2M 'sip seed' round co-led by Reid Hoffman and StartingLine VC (announced May 21, 2025).",
+      "highlight": false,
+      "url_ok": true
+    },
+    {
+      "date": "2025-03-13",
+      "outlet": "Generative Now (Lightspeed)",
+      "title": "Dan Shipper: The First Multimodal Media Company",
+      "url": "https://podcasts.apple.com/us/podcast/dan-shipper-the-first-multimodal-media-company/id1709773028?i=1000699009475",
+      "type": "podcast",
+      "note": "Lightspeed partner Michael Mignano interviews Shipper on building a media company that ships viral software like Cora.",
+      "highlight": false,
+      "url_ok": true
+    },
+    {
+      "date": "2024-10-10",
+      "outlet": "Infinite Loops",
+      "title": "Dan Shipper — I, Writer (EP.237)",
+      "url": "https://www.infiniteloopspodcast.com/dan-shipper-i-writer-ep237/",
+      "type": "podcast",
+      "note": "Jim O'Shaughnessy interviews Shipper on AI companions, the Every 'pyramid,' and LLMs as mirrors for humanity.",
+      "highlight": false,
+      "url_ok": true
+    },
+    {
+      "date": "2024-07-21",
+      "outlet": "Creator Economy (Peter Yang)",
+      "title": "How Top Experts Use AI to Write, Code, and Run Their Business | Dan Shipper (Every)",
+      "url": "https://creatoreconomy.so/p/how-to-use-ai-to-write-dan-shipper",
+      "type": "interview",
+      "note": "Interview on AI workflows for writing and coding, the AI & I podcast, and launching Spiral.",
+      "highlight": false,
+      "url_ok": true
+    },
+    {
+      "date": "2024-05-16",
+      "outlet": "Making Media (Colossus)",
+      "title": "Every Things, Everywhere, All at Once with Dan Shipper",
+      "url": "https://podcasts.apple.com/us/podcast/every-things-everywhere-all-at-once-with-dan-shipper/id1662094664?i=1000655770216",
+      "type": "podcast",
+      "note": "Colossus's Making Media show on Every's evolution from newsletter bundle to AI media-and-product studio.",
+      "highlight": false,
+      "url_ok": true
+    },
+    {
+      "date": "2024-01-15",
+      "outlet": "Beyond the Prompt",
+      "title": "Dan Shipper, Every: 'Use AI to Make You and Your Business Better'",
+      "url": "https://podcast.beyondtheprompt.ai/episodes/dan-shipper-every-use-ai-to-make-you-and-your-business-better",
+      "type": "podcast",
+      "note": "Jeremy Utley (Stanford) and Henrik Werdelin interview Shipper on practical AI adoption inside companies.",
+      "highlight": false,
+      "url_ok": true
+    },
+    {
+      "date": "2023-12-20",
+      "outlet": "The Cognitive Revolution",
+      "title": "Using ChatGPT as a Copilot for Your Mind, with Dan Shipper",
+      "url": "https://www.cognitiverevolution.ai/using-chatgpt-as-a-copilot-for-your-mind/",
+      "type": "podcast",
+      "note": "Nathan Labenz interviews Shipper on ChatGPT as a thinking partner and Every's early AI playbook.",
+      "highlight": false,
+      "url_ok": true
+    },
+    {
+      "date": "2023-03-29",
+      "outlet": "TED",
+      "title": "The Unexpected Key to Boosting Your Productivity (The Way We Work)",
+      "url": "https://www.ted.com/talks/dan_shipper_the_unexpected_key_to_boosting_your_productivity",
+      "type": "talk",
+      "note": "TED 'The Way We Work' talk on awareness, observation, and experimentation over machine-like productivity; speaker page: ted.com/speakers/dan_shipper.",
+      "highlight": true,
+      "url_ok": true
+    },
+    {
+      "date": "2021-07-28",
+      "outlet": "Indie Hackers Podcast",
+      "title": "#219 — How to Make Your Business Model a Win-Win-Win, with Dan Shipper and Nathan Baschez of Every",
+      "url": "https://www.indiehackers.com/podcast/219-dan-shipper-nathan-baschez",
+      "type": "podcast",
+      "note": "Courtland Allen interviews the Every cofounders on the writer-collective model and strategic bundling.",
+      "highlight": false,
+      "url_ok": true
+    },
+    {
+      "date": "2021-01-26",
+      "outlet": "Axios",
+      "title": "The 'Everything' Bundle Is the Latest to Leave Substack for Its Own, More Robust Technology",
+      "url": "https://www.axios.com/2021/01/26/everything-bundle-substack-newsletters",
+      "type": "article",
+      "note": "Sara Fischer covers Shipper and Baschez moving the Everything bundle (now Every) off Substack — key Substack-ecosystem press.",
+      "highlight": true,
+      "url_ok": true
+    },
+    {
+      "date": "2020-09-18",
+      "outlet": "A Media Operator",
+      "title": "Dan Shipper & Nathan Baschez on Building Everything",
+      "url": "https://www.amediaoperator.com/podcast/podcast-dan-shipper-and-nathan-baschez/",
+      "type": "podcast",
+      "note": "Jacob Cohen Donnelly's media-business podcast on the Everything bundle's subscription strategy.",
+      "highlight": false,
+      "url_ok": true
+    },
+    {
+      "date": "2017-01-04",
+      "outlet": "CNNMoney",
+      "title": "Celebrity-Filled Telethon Set for Facebook Live on Inauguration Day",
+      "url": "https://web.archive.org/web/20250323183720/https://money.cnn.com/2017/01/04/technology/loveathon-facebook-live/index.html",
+      "type": "article",
+      "note": "Names Shipper as a co-organizer of the Love-a-thon, the first Facebook Live telethon ($200K for ACLU/Planned Parenthood/Earthjustice, 60+ celebrities). Archive.org link; original money.cnn.com URL now returns 503.",
+      "highlight": false,
+      "url_ok": true
+    },
+    {
+      "date": "2015-01-28",
+      "outlet": "First Round Review",
+      "title": "This 23-Year-Old Built and Sold His Startup While in School — Here's What Made the Difference",
+      "url": "https://review.firstround.com/this-23-year-old-built-and-sold-his-startup-while-in-school-heres-what-made-the-difference/",
+      "type": "profile",
+      "note": "First Round Review feature on how Shipper bootstrapped and sold Firefly while at Penn: patience, selling early, staying lean.",
+      "highlight": true,
+      "url_ok": true
+    },
+    {
+      "date": "2014-11-25",
+      "outlet": "Hack To Start",
+      "title": "Episode 17 — Dan Shipper, Co-founder, Firefly",
+      "url": "https://podcasts.apple.com/nz/podcast/hack-to-start-episode-17-dan-shipper-co-founder-firefly/id929857801?i=1000326095607",
+      "type": "podcast",
+      "note": "Post-acquisition interview on building Firefly in college and the sale to Pegasystems.",
+      "highlight": false,
+      "url_ok": true
+    },
+    {
+      "date": "2014-06-09",
+      "outlet": "TechCrunch",
+      "title": "Pegasystems Acquires Co-Browsing Tool Firefly, the First Investment by First Round's Dorm Room Fund",
+      "url": "https://techcrunch.com/2014/06/09/pegasystems-acquires-co-browsing-tool-firefly-the-first-investment-by-first-rounds-dorm-room-fund/",
+      "type": "article",
+      "note": "The defining acquisition story: Shipper sells Firefly to Pegasystems weeks after graduating Penn.",
+      "highlight": true,
+      "url_ok": true
+    },
+    {
+      "date": "2014-06-09",
+      "outlet": "Technical.ly",
+      "title": "Firefly Acquired by Pegasystems",
+      "url": "https://technical.ly/startups/firefly-acquired-by-pegasystems/",
+      "type": "article",
+      "note": "Philly tech-press coverage of the exit; Shipper and Meltzer join Pegasystems' NYC office.",
+      "highlight": false,
+      "url_ok": true
+    },
+    {
+      "date": "2014-06-09",
+      "outlet": "Information Age",
+      "title": "Pegasystems Acquires Collaboration and Co-Browsing Firm Firefly",
+      "url": "https://www.information-age.com/pegasystems-acquires-collaboration-and-co-browsing-firm-firefly-29764/",
+      "type": "article",
+      "note": "UK enterprise-IT coverage of the acquisition, quoting Shipper as Firefly co-founder and CEO.",
+      "highlight": false,
+      "url_ok": true
+    },
+    {
+      "date": "2014-06-09",
+      "outlet": "Destination CRM",
+      "title": "Pegasystems Acquires Collaboration and Co-Browsing Provider Profeatable (Firefly)",
+      "url": "https://www.destinationcrm.com/Articles/CRM-News/CRM-Across-the-Wire/Pegasystems-Acquires-Collaboration-and-Co-Browsing-Provider-Profeatable---97521.aspx",
+      "type": "article",
+      "note": "CRM trade-press coverage of the deal with Shipper's statement on the acquisition.",
+      "highlight": false,
+      "url_ok": true
+    },
+    {
+      "date": "2014-06",
+      "outlet": "The Philadelphia Inquirer (PhillyDeals)",
+      "title": "Dorm Room Fund's Firefly Sold to Pegasystems",
+      "url": "https://www.inquirer.com/philly/blogs/inq-phillydeals/Dorm-Room-Funds-Firefly-.html",
+      "type": "article",
+      "note": "Hometown business-press coverage of the first Dorm Room Fund exit.",
+      "highlight": false,
+      "url_ok": true
+    },
+    {
+      "date": "2014-01-29",
+      "outlet": "Mixergy",
+      "title": "How Firefly's Founder Bootstrapped a 6-Figure Business from School",
+      "url": "https://mixergy.com/interviews/dan-shipper-firefly-interview/",
+      "type": "interview",
+      "note": "Andrew Warner's classic founder interview on bootstrapping Firefly to six figures while a Penn student.",
+      "highlight": false,
+      "url_ok": true
+    },
+    {
+      "date": "2013-07-30",
+      "outlet": "Business Insider (via Yahoo Finance)",
+      "title": "What It's Like to Be a College Kid with a Profitable Side Business That Pulls in 6 Figures",
+      "url": "https://finance.yahoo.com/news/college-kid-running-profitable-side-210538291.html",
+      "type": "profile",
+      "note": "Alyson Shontell's Business Insider profile of Shipper balancing senior year at Penn with a six-figure startup; original BI URL no longer live, Yahoo syndication resolves.",
+      "highlight": false,
+      "url_ok": true
+    },
+    {
+      "date": "2013-07-30",
+      "outlet": "Technical.ly",
+      "title": "Firefly's Cobrowsing Software Is Live with Chat Tool Olark's 5K Customers",
+      "url": "https://technical.ly/startups/firefly-olark/",
+      "type": "article",
+      "note": "Coverage of the Olark partnership that took Firefly from 1,000 to 6,000 customers.",
+      "highlight": false,
+      "url_ok": true
+    },
+    {
+      "date": "2013-04-02",
+      "outlet": "The New York Times (You're the Boss blog)",
+      "title": "A Start-Up Fund That Lets College Students Make the Decisions",
+      "url": "https://boss.blogs.nytimes.com/2013/04/02/a-start-up-fund-that-lets-college-students-make-the-decisions/",
+      "type": "article",
+      "note": "NYT piece on the Dorm Room Fund featuring its first investment — Firefly, 'the screen-sharing startup run by Penn undergrads Dan Shipper, Patrick Leahy and Justin Meltzer.'",
+      "highlight": true,
+      "url_ok": true
+    },
+    {
+      "date": "2013-03-23",
+      "outlet": "Entrepreneur",
+      "title": "College Entrepreneurs Create Software to Help Businesses Thrive",
+      "url": "https://www.entrepreneur.com/article/225823",
+      "type": "article",
+      "note": "Feature on Shipper, Leahy, and Meltzer's Airtime (email-signature marketing) and Firefly ventures at Penn.",
+      "highlight": false,
+      "url_ok": true
+    },
+    {
+      "date": "2013-02-07",
+      "outlet": "Life-Long Learner",
+      "title": "An Interview with Dan Shipper: His New Startup and Relationships",
+      "url": "https://life-longlearner.com/dan-shipper-interview/",
+      "type": "interview",
+      "note": "Student-era interview on Firefly, learning in public, and building relationships.",
+      "highlight": false,
+      "url_ok": true
+    },
+    {
+      "date": "2013",
+      "outlet": "Inc.",
+      "title": "America's Coolest College Start-ups 2013: Firefly — Making Screensharing Dead Simple",
+      "url": "https://www.inc.com/coolest-college-start-ups-2013/lindsay-blakely/dan-shipper-firefly.html",
+      "type": "profile",
+      "note": "Firefly named to Inc.'s annual Coolest College Start-ups list (page is bot-walled to scripts but live in browsers).",
+      "highlight": false,
+      "url_ok": true
+    },
+    {
+      "date": "2012-12-06",
+      "outlet": "The Daily Pennsylvanian",
+      "title": "Dorm Room Fund Selects Student Investment Committee",
+      "url": "https://www.thedp.com/article/2012/12/dorm-room-fund-selects-student-investment-committee",
+      "type": "article",
+      "note": "Penn's student paper on the Dorm Room Fund's first portfolio company — Shipper's Firefly.",
+      "highlight": false,
+      "url_ok": true
+    },
+    {
+      "date": "2012-12-05",
+      "outlet": "The Philadelphia Inquirer",
+      "title": "Fund Lets Students Follow Entrepreneurial Dreams",
+      "url": "https://www.inquirer.com/philly/business/20121205_Fund_lets_students_follow_entrepreneurial_dreams.html",
+      "type": "article",
+      "note": "Inquirer business story on the Dorm Room Fund's launch and its $20K Firefly investment.",
+      "highlight": false,
+      "url_ok": true
+    },
+    {
+      "date": "2012-12-04",
+      "outlet": "Business Insider",
+      "title": "A Bunch of Students Think They May Have Found the Next Mark Zuckerberg",
+      "url": "https://www.businessinsider.com/a-bunch-of-students-think-they-may-have-found-the-next-mark-zuckerberg-2012-12",
+      "type": "article",
+      "note": "Alyson Shontell on the Dorm Room Fund's first-ever investment going to Shipper's Firefly.",
+      "highlight": false,
+      "url_ok": true
+    },
+    {
+      "date": "2012-12-04",
+      "outlet": "PandoDaily",
+      "title": "Philly Student-Investors Choose Dorm Room Fund's First Deal: Firefly",
+      "url": "https://pando.com/2012/12/04/philly-student-investors-choose-dorm-room-funds-first-deal-firefly/",
+      "type": "article",
+      "note": "Pando's coverage of Firefly winning the Dorm Room Fund's inaugural check.",
+      "highlight": false,
+      "url_ok": true
+    },
+    {
+      "date": "2012-12-04",
+      "outlet": "The Next Web",
+      "title": "Firefly Nabs $20K from First Round Capital's Dorm Room Fund",
+      "url": "https://thenextweb.com/news/firefly-raises-20k-from-first-round-capitals-dorm-room-fund",
+      "type": "article",
+      "note": "TNW news story on Firefly's Dorm Room Fund investment, quoting Shipper.",
+      "highlight": false,
+      "url_ok": true
+    },
+    {
+      "date": "2012-12-04",
+      "outlet": "Technical.ly",
+      "title": "Firefly: Dorm Room Fund Announces $20K Investment in Penn Undergrad Startup",
+      "url": "https://technical.ly/uncategorized/firefly-dorm-room-fund-20k-investment-penn-undergrad-startup/",
+      "type": "article",
+      "note": "Technically Philly on the Dorm Room Fund's first investment, with Shipper on taking 'money on our own terms.'",
+      "highlight": false,
+      "url_ok": true
+    },
+    {
+      "date": "2012-04-27",
+      "outlet": "TechCrunch",
+      "title": "42Floors' PDA: The War for Talent Among Startups Needs a New Approach — Here's Why",
+      "url": "https://techcrunch.com/2012/04/27/42floors-pda-the-war-for-talent-among-startups-needs-a-new-approach-heres-why/",
+      "type": "article",
+      "note": "TechCrunch on 42Floors' viral public job offer to then-Penn-sophomore Shipper — and his decision to stay in school.",
+      "highlight": false,
+      "url_ok": true
+    },
+    {
+      "date": "2011-08-08",
+      "outlet": "Startup Project",
+      "title": "The Road to Entrepreneurship: An Interview with Dan Shipper",
+      "url": "https://startupproject.org/blog/the-road-to-entrepreneurship-an-interview-with-dan-shipper/",
+      "type": "interview",
+      "note": "Earliest known interview: the Penn student behind WhereMyFriends.be and Airtime on getting started.",
+      "highlight": false,
+      "url_ok": true
+    },
+    {
+      "date": "2011-02-24",
+      "outlet": "CNN (from Mashable)",
+      "title": "Map Your Facebook Friends in a Few Clicks",
+      "url": "https://www.cnn.com/2011/TECH/social.media/02/24/facebook.friends.mashable/",
+      "type": "article",
+      "note": "CNN/Mashable feature on WhereMyFriends.be, the viral Facebook-friends map Shipper built with Ajay Mehta and Wesley Zhao (40K+ signups).",
+      "highlight": false,
+      "url_ok": true
+    }
+  ]
+}
