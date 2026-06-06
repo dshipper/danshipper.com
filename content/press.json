@@ -42,6 +42,36 @@
       "url_ok": true
     },
     {
+      "date": "2026-03-28",
+      "outlet": "The New York Times",
+      "title": "Smaller Is Better in Silicon Valley's 'Tiny Team' Moment",
+      "url": "https://www.seattletimes.com/explore/careers/smaller-is-better-in-silicon-valleys-tiny-team-moment/",
+      "type": "article",
+      "note": "Lora Kelley on the tiny-team era, where Dan coins the “two-slice team”: one person plus AI. (Linked via syndication.)",
+      "highlight": true,
+      "url_ok": true
+    },
+    {
+      "date": "2026-01-13",
+      "outlet": "Axios",
+      "title": "Anthropic's viral new work tool wrote itself",
+      "url": "https://www.axios.com/2026/01/13/anthropic-claude-code-cowork-vibe-coding",
+      "type": "article",
+      "note": "Shipper quoted on Anthropic's Claude Cowork (built using its own vibe-coding workflow in a week and a half) — tells Axios he has 'a handful of small complaints — which are really just feature requests.' Axios 403s scripts; confirmed via search snippets.",
+      "highlight": false,
+      "url_ok": true
+    },
+    {
+      "date": "2026-01-07",
+      "outlet": "Axios",
+      "title": "Anthropic's Claude Code transforms vibe coding",
+      "url": "https://www.axios.com/2026/01/07/anthropics-claude-code-vibe-coding",
+      "type": "article",
+      "note": "Shipper quoted at length as the primary expert voice — calls Claude Code an 'infinite vibe coding machine' and says it gives 'one engineer the productivity of four or five.' Axios bot-walls scripts (403) but Shipper quotes confirmed via multiple search snippets and inkl.com mirror.",
+      "highlight": false,
+      "url_ok": true
+    },
+    {
       "date": "2025-11-21",
       "outlet": "Big Think",
       "title": "How Large Language Models View Our World — Dan Shipper: Full Interview",
