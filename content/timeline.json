@@ -1,0 +1,74 @@
+{
+  "compiled_at": "2026-06-06",
+  "items": [
+    {
+      "when": "2011",
+      "what": "Started blogging as a Penn freshman. Applied to Y Combinator, got the interview, got rejected—and wrote the whole thing up in public.",
+      "link": "/interviewing-at-y-combinator-part-1",
+      "link_text": "wrote the whole thing up"
+    },
+    {
+      "when": "2012",
+      "what": "Co-founded Firefly, a co-browsing tool for customer support, at the PennApps hackathon with Justin Meltzer and Patrick Leahy. It took the first check ever written by First Round Capital's Dorm Room Fund, then bootstrapped well into six figures.",
+      "link": null
+    },
+    {
+      "when": "2014",
+      "what": "Sold Firefly to Pegasystems—closing the deal right after walking at graduation, philosophy degree in hand. Ran the Firefly unit at Pega for two years.",
+      "link": "https://techcrunch.com/2014/06/09/pegasystems-acquires-co-browsing-tool-firefly-the-first-investment-by-first-rounds-dorm-room-fund/",
+      "link_text": "Sold Firefly to Pegasystems"
+    },
+    {
+      "when": "2017",
+      "what": "Co-organized “Stand Up for Love,” an Inauguration Day telethon with 60+ celebrities and 1.5 million viewers that raised $200,000 for the ACLU, Planned Parenthood, and Earthjustice.",
+      "link": null
+    },
+    {
+      "when": "2018–20",
+      "what": "Partner at First Round Capital's Product Co-Op, making pre-seed investments; entrepreneur-in-residence at Prehype.",
+      "link": null
+    },
+    {
+      "when": "2019",
+      "what": "Started Superorganizers, a newsletter about how the smartest people in the world organize what they know.",
+      "link": "https://every.to/superorganizers",
+      "link_text": "Superorganizers"
+    },
+    {
+      "when": "2020",
+      "what": "Co-founded the Everything Bundle with Nathan Baschez—rebranded as Every in January 2021.",
+      "link": "https://every.to",
+      "link_text": "Everything Bundle"
+    },
+    {
+      "when": "2022",
+      "what": "Started Chain of Thought, a weekly column on AI and the psychology of work.",
+      "link": "https://every.to/chain-of-thought",
+      "link_text": "Chain of Thought"
+    },
+    {
+      "when": "2023",
+      "what": "Gave a TED Talk on the unexpected key to productivity; launched the podcast that became AI & I—116 episodes and counting.",
+      "link": "https://www.ted.com/speakers/dan_shipper",
+      "link_text": "TED Talk"
+    },
+    {
+      "when": "2024",
+      "what": "Coined the “allocation economy” in a January essay; launched Every Studio, Every's product incubator, in October.",
+      "link": "https://every.to/chain-of-thought/the-knowledge-economy-is-over-welcome-to-the-allocation-economy",
+      "link_text": "allocation economy"
+    },
+    {
+      "when": "2025",
+      "what": "Every raised a $2M seed co-led by Reid Hoffman and StartingLine VC, crossed $1M ARR, and ran it all with roughly 15 people.",
+      "link": "https://every.to/on-every/so-we-raised-some-money",
+      "link_text": "$2M seed"
+    },
+    {
+      "when": "2026",
+      "what": "Published “After Automation,” an 8,000-word essay on why AI creates more human work, not less. It went viral; the argument stuck.",
+      "link": "https://every.to/p/after-automation",
+      "link_text": "After Automation"
+    }
+  ]
+}

@@ -1,0 +1,254 @@
+{
+  "compiled_at": "2026-06-06",
+  "facts": [
+    {
+      "topic": "firefly_founding",
+      "claim": "Firefly was founded in January 2012 at the PennApps student hackathon by Dan Shipper (then a junior/third-year at Penn, not a sophomore), co-founder Justin Meltzer (who had already graduated with a degree in entrepreneurship and finance from Penn), and a third co-founder Patrick Leahy. The product was co-browsing/screensharing software for websites. It launched commercially in fall 2012.",
+      "source_url": "https://www.inc.com/coolest-college-start-ups-2013/lindsay-blakely/dan-shipper-firefly.html",
+      "confidence": "high",
+      "notes": "Shipper was a junior (not sophomore) at Penn when Firefly was founded. Three co-founders: Shipper, Meltzer, and Leahy. Meltzer had already graduated before founding. The 'sophomore year' claim is incorrect."
+    },
+    {
+      "topic": "firefly_revenue",
+      "claim": "Firefly was bootstrapped (aside from a $20,000 Dorm Room Fund investment) and was 'well into six figures in revenue' by early 2013. It was the first company backed by First Round Capital's Dorm Room Fund.",
+      "source_url": "https://techcrunch.com/2014/06/09/pegasystems-acquires-co-browsing-tool-firefly-the-first-investment-by-first-rounds-dorm-room-fund/",
+      "confidence": "high",
+      "notes": "Dorm Room Fund investment amount was $20,000. 'Six figures' is confirmed by Inc. article from 2013 and TechCrunch."
+    },
+    {
+      "topic": "firefly_acquisition",
+      "claim": "Firefly was acquired by Pegasystems (Cambridge, MA) in June 2014 for undisclosed terms (reported as 'multiple millions'). Announcement date: June 9, 2014. Dan Shipper and Justin Meltzer both joined Pegasystems full-time, relocating to the NYC office. Firefly maintained its brand while its co-browsing technology was integrated into Pegasystems' flagship product.",
+      "source_url": "https://techcrunch.com/2014/06/09/pegasystems-acquires-co-browsing-tool-firefly-the-first-investment-by-first-rounds-dorm-room-fund/",
+      "confidence": "high",
+      "notes": "Shipper traveled from his graduation ceremony to close the deal. He was 23 at time of sale. Terms not disclosed publicly; 'multiple millions' from First Round Review profile."
+    },
+    {
+      "topic": "firefly_shipper_role",
+      "claim": "Dan Shipper's title at Firefly was Co-founder and CEO. At Pegasystems post-acquisition, his title was Principal, Collaboration Initiatives (July 2014 – July 2016).",
+      "source_url": "https://review.firstround.com/This-23-Year-Old-Built-and-Sold-His-Startup-While-In-School-Heres-What-Made-the-Difference",
+      "confidence": "high",
+      "notes": "CEO title at Firefly confirmed by multiple sources. Post-acquisition Pegasystems title from LinkedIn data surfaced in search results."
+    },
+    {
+      "topic": "university_of_pennsylvania",
+      "claim": "Dan Shipper graduated from the University of Pennsylvania in 2014 with a bachelor's degree in philosophy. He graduated the same month as the Firefly acquisition announcement (June 2014).",
+      "source_url": "https://mercury.com/blog/what-comes-next-dan-shipper-every",
+      "confidence": "high",
+      "notes": "Philosophy major confirmed by multiple sources including his own quote: 'I felt I wanted to know how to live a good life, and that was the only major that would tell me how to do it.' The exact degree type (BA vs BS) is not confirmed in sources reviewed — sources say 'bachelor's degree in philosophy.'"
+    },
+    {
+      "topic": "blog_danshipper_com",
+      "claim": "Dan Shipper's blog at danshipper.com claims 'over 700,000 readers since 2010.' The earliest archived posts are from February 2011. His own site states 2010 as the start year. Active writing period was roughly 2011–2016.",
+      "source_url": "https://danshipper.com/",
+      "confidence": "medium",
+      "notes": "The 700,000 figure is Dan's own self-reported claim from his site homepage (unverified externally). Blog archive shows posts from 2011/02 at danshipper.com/2011/02. The 2010 start year is from his own site copy. Use as 'his own claim' on the site."
+    },
+    {
+      "topic": "y_combinator",
+      "claim": "Dan Shipper applied to Y Combinator in summer 2011 (his freshman year at Penn), originally pitching WhereMyFriends.Be (a Facebook/Google Maps mashup). Paul Graham rejected the idea but liked the founders. They pivoted to ReadStream (built in two nights) and got an in-person interview. They were ultimately rejected. The blog posts 'Interviewing at Y Combinator Part 1' (Sept 12, 2011) and Part 2 (Nov 2011) document the experience.",
+      "source_url": "https://danshipper.com/interviewing-at-y-combinator-part-1",
+      "confidence": "high",
+      "notes": "Rejected — not accepted. Original product was WhereMyFriends.Be. Final pitched product was ReadStream. Co-applicants were Wesley Zhao and Ajay Mehta. Dan was a freshman/first-year at Penn in 2011."
+    },
+    {
+      "topic": "career_post_firefly_pegasystems",
+      "claim": "After the Firefly acquisition, Dan Shipper worked at Pegasystems as Principal, Collaboration Initiatives from July 2014 to July 2016, overseeing product, engineering, and marketing for the Firefly business unit within Pegasystems.",
+      "source_url": "https://danshipper.com/",
+      "confidence": "high",
+      "notes": "Title and dates confirmed from LinkedIn data. He spent approximately two years at Pega post-acquisition."
+    },
+    {
+      "topic": "career_first_round_product_coop",
+      "claim": "Dan Shipper was a Partner at First Round Capital's Product Co-Op from approximately 2018–2019, making pre-seed investments in early-stage startups. He helped founders with tactical product matters including branding and user research.",
+      "source_url": "https://firstround.medium.com/two-new-product-leaders-investing-in-new-york-a4d501d37ffe",
+      "confidence": "medium",
+      "notes": "The Medium post announcing his addition is now a 410 Gone. Dates of 2018-2019 are from LinkedIn data surfaced in search results. The exact overlap with Prehype role is unclear."
+    },
+    {
+      "topic": "career_prehype_eir",
+      "claim": "Dan Shipper was an Entrepreneur in Residence at Prehype from approximately March 2018 to January 2020.",
+      "source_url": "https://prehype.com/institute",
+      "confidence": "medium",
+      "notes": "Dates from LinkedIn data. The Prehype and First Round Co-Op roles appear to have overlapped (both ~2018-2019). Could not independently verify exact dates from primary sources."
+    },
+    {
+      "topic": "telethon_2017",
+      "claim": "On January 20, 2017 (Inauguration Day), Dan Shipper co-organized 'Stand Up For Love: A Love-A-Thon' — a 3-hour Facebook Live charity telethon streaming from 12:30 PM–3:30 PM EST. The event raised approximately $200,000 for the ACLU, Planned Parenthood, and Earthjustice. 60+ celebrities participated including Joseph Gordon-Levitt, Judd Apatow, Martin Sheen, Jane Fonda, Rashida Jones, Jamie Lee Curtis, and others. Over 1.5 million people watched. The event was conceived by tech entrepreneur Alex Godin; Shipper was one of the co-organizers.",
+      "source_url": "https://www.commondreams.org/newswire/2017/01/19/inauguration-day-love-thon-raise-money-earthjustice-others",
+      "confidence": "high",
+      "notes": "Official event name is 'Stand Up For Love: A Love-A-Thon' (not 'Parade' or 'yourparade.com' — those names could not be confirmed). Primary organizer was Alex Godin; Shipper was a co-organizer. Amount raised ($200k) is from multiple sources but was well short of the $500k goal."
+    },
+    {
+      "topic": "every_founding",
+      "claim": "Every was co-founded by Dan Shipper and Nathan Baschez in 2020. It launched as 'The Everything Bundle' — a bundled Substack subscription combining Shipper's Superorganizers newsletter and Baschez's Divinations newsletter. The bundle was rebranded as 'Every' on January 26, 2021 when they moved to their own platform off Substack.",
+      "source_url": "https://every.to/on-every/introducing-every-2762cb67-3784-47a4-9f79-b2e991594b52",
+      "confidence": "high",
+      "notes": "The original name was 'The Everything Bundle' (not simply 'Everything'). Rebranded to 'Every' on Jan 26, 2021. Superorganizers (Dan's newsletter) began in 2019 before the bundle."
+    },
+    {
+      "topic": "every_dan_title",
+      "claim": "Dan Shipper's current title is Co-founder and CEO of Every.",
+      "source_url": "https://every.to/@danshipper",
+      "confidence": "high",
+      "notes": "Consistent across all sources."
+    },
+    {
+      "topic": "nathan_baschez_departure",
+      "claim": "Nathan Baschez departed Every on August 22, 2023 to become CEO of Lex (the AI writing app incubated at Every), which raised a $2.75 million seed round from True Ventures. Lex had been developed within Every starting in August 2022.",
+      "source_url": "https://every.to/p/we-re-spinning-out-lex",
+      "confidence": "high",
+      "notes": "Spinout announced August 22, 2023. The seed round was $2.75M from True Ventures (some sources say $2.8M — minor variance)."
+    },
+    {
+      "topic": "chain_of_thought_column",
+      "claim": "Dan Shipper's Chain of Thought column at Every.to dates back to at least November 10, 2022 (earliest article found: 'AI and the Age of the Individual'). The column covers AI, tools for thought, and the psychology of work. Prior to this column, Shipper wrote Superorganizers (active 2019–2023).",
+      "source_url": "https://every.to/chain-of-thought",
+      "confidence": "medium",
+      "notes": "November 2022 is the earliest article visible in the archive; the exact launch date of the column as a named column is not definitively documented in available sources."
+    },
+    {
+      "topic": "ai_and_i_podcast",
+      "claim": "The podcast was originally launched November 14, 2023 under the name 'How Do You Use ChatGPT?' with Sahil Lavingia (Gumroad CEO) as the first guest. It was renamed 'AI & I' on May 28, 2024. As of June 2026, there are 116 episodes (Apple Podcasts). It ran from 2023–present and is consistently a top-50 technology podcast in the US.",
+      "source_url": "https://podcasts.apple.com/us/podcast/ai-i/id1719789201",
+      "confidence": "high",
+      "notes": "Launch date November 14, 2023 from Dan's X/Twitter post. Rename date May 28, 2024. Episode count of 116 from Apple Podcasts as of June 2026."
+    },
+    {
+      "topic": "every_subscriber_count",
+      "claim": "Every publicly states 'Trusted by 100,000 builders' on its homepage (as of June 2026). Verified internal data: email blast sent to 104,011 recipients in May 2026. Safe public claim: '100,000+ subscribers.'",
+      "source_url": "https://every.to/",
+      "confidence": "high",
+      "notes": "Homepage says '100,000 builders' — verified internally at 104,011. Use '100,000+' on the site."
+    },
+    {
+      "topic": "every_team_size",
+      "claim": "Every had approximately 14–15 full-time and contract employees as of mid-2025 (sources vary: Lenny's Newsletter says 15-person team; Mercury profile says 14 people).",
+      "source_url": "https://www.lennysnewsletter.com/p/inside-every-dan-shipper",
+      "confidence": "medium",
+      "notes": "Team size varies by source and changes over time. As of publication date July 2025, roughly 14-15 people. Likely grown since."
+    },
+    {
+      "topic": "every_revenue",
+      "claim": "Every achieved $1 million ARR (annual recurring revenue) as of approximately June 2025. The company also operates a 'million-dollar-a-year consulting division.' Revenue is 7-figure annually.",
+      "source_url": "https://mercury.com/blog/what-comes-next-dan-shipper-every",
+      "confidence": "medium",
+      "notes": "The $1M ARR milestone is from the Mercury profile published mid-2025. Lenny's Newsletter (July 2025) confirms '7-figure revenue' and a consulting arm generating ~$1M/year. No newer public revenue figures found."
+    },
+    {
+      "topic": "every_funding",
+      "claim": "Every raised a $2 million 'sip seed round' co-led by Reid Hoffman and StartingLine VC, with participation from Will England of Walleye Capital. Announced May 21, 2025. The round has a draw-down structure (company takes funds as needed). Bedrock is also listed as an investor on the Every about page.",
+      "source_url": "https://every.to/on-every/so-we-raised-some-money",
+      "confidence": "high",
+      "notes": "Announcement date: May 21, 2025. Amount: $2M. Lead investors: Reid Hoffman AND StartingLine VC (co-led — not solely Reid Hoffman). The claim that Reid Hoffman alone led is incorrect. Bedrock is listed as investor separately, suggesting prior investment."
+    },
+    {
+      "topic": "every_studio",
+      "claim": "Every Studio is Every's product incubation arm, launched October 15, 2024. It functions as an in-house incubator for AI consumer apps, placing entrepreneurs-in-residence (EIRs) on three-month engagements to build products within Every's subscription bundle.",
+      "source_url": "https://every.to/on-every/introducing-every-studio",
+      "confidence": "high",
+      "notes": "Launch date: October 15, 2024. Funded by a $150,000 'speed round' from Sahil Lavingia (Gumroad). This is the incubator arm; the consulting arm is a separate revenue stream."
+    },
+    {
+      "topic": "ted_talk",
+      "claim": "Dan Shipper gave a TED Talk titled 'The unexpected key to boosting your productivity,' posted March 2023, approximately 6 minutes 48 seconds. He has an official TED speaker profile at https://www.ted.com/speakers/dan_shipper.",
+      "source_url": "https://www.ted.com/speakers/dan_shipper",
+      "confidence": "high",
+      "notes": "TED speaker page confirmed live (HTTP 200). No Forbes 30 Under 30 or book found in research."
+    },
+    {
+      "topic": "awards_books",
+      "claim": "No Forbes 30 Under 30, book publications, or other named awards found in research. Dan Shipper was featured in Inc. Magazine's 'Coolest College Startups 2013' list.",
+      "source_url": "https://www.inc.com/coolest-college-start-ups-2013/lindsay-blakely/dan-shipper-firefly.html",
+      "confidence": "medium",
+      "notes": "Absence of evidence is not evidence of absence — no 30 Under 30 or books found, but could not exhaustively confirm nonexistence. Keep off site unless confirmed."
+    },
+    {
+      "topic": "firefly_third_cofounder",
+      "claim": "Firefly had three co-founders: Dan Shipper, Justin Meltzer, and Patrick Leahy. All three built the original prototype at PennApps hackathon in January 2012.",
+      "source_url": "https://www.inc.com/coolest-college-start-ups-2013/lindsay-blakely/dan-shipper-firefly.html",
+      "confidence": "medium",
+      "notes": "Patrick Leahy is the third co-founder mentioned in Inc. article. TechCrunch and most other sources only name Shipper and Meltzer. Leahy's long-term role in the company is unclear."
+    }
+  ],
+  "every_products": [
+    {
+      "name": "Cora",
+      "tagline": "An AI assistant for your email",
+      "url": "https://cora.computer/",
+      "notes": "Email AI assistant, $15/month"
+    },
+    {
+      "name": "Sparkle",
+      "tagline": "Automatic file organization so you can find what you need",
+      "url": "https://makeitsparkle.co/",
+      "notes": "Desktop file organization tool"
+    },
+    {
+      "name": "Spiral",
+      "tagline": "Your AI writing assistant with taste—publish with confidence",
+      "url": "https://writewithspiral.com/",
+      "notes": "AI writing assistant; 5,000+ signups as of late 2024"
+    },
+    {
+      "name": "Monologue",
+      "tagline": "Effortless voice dictation—work 3x faster",
+      "url": "https://monologue.to/",
+      "notes": "Voice dictation tool"
+    },
+    {
+      "name": "Proof",
+      "tagline": "A collaborative editor for humans and AI",
+      "url": "https://proofeditor.ai/",
+      "notes": "Collaborative markdown editor with AI and provenance tracking; listed on Every homepage"
+    },
+    {
+      "name": "Plus One",
+      "tagline": "Provision a personal AI agent in Slack with one click",
+      "url": "https://every.to/plus-one/",
+      "notes": "AI agent for Slack; in early onboarding/beta as of June 2026"
+    },
+    {
+      "name": "Every Studio",
+      "tagline": "Product incubator for AI consumer apps",
+      "url": "https://every.to/on-every/introducing-every-studio",
+      "notes": "Incubator arm launched October 15, 2024; not a consumer product but internal program"
+    }
+  ],
+  "every_consulting": {
+    "description": "Every operates a consulting/training arm that generated approximately $1 million/year in revenue as of mid-2025, working with enterprise clients on AI deployment and strategy.",
+    "source_url": "https://www.lennysnewsletter.com/p/inside-every-dan-shipper",
+    "notes": "Mentioned in Lenny's Newsletter July 2025 interview. Not prominently featured on the Every homepage as a named product."
+  },
+  "socials": {
+    "x": "https://x.com/danshipper",
+    "x_status": "200 OK — confirmed live",
+    "linkedin": "https://www.linkedin.com/in/danshipper/",
+    "linkedin_status": "999 (LinkedIn blocks crawlers) — URL format confirmed correct",
+    "github": "https://github.com/dshipper",
+    "github_status": "200 OK — confirmed live; username dshipper, 216 followers",
+    "ted": "https://www.ted.com/speakers/dan_shipper",
+    "ted_status": "200 OK — confirmed live",
+    "apple_podcasts": "https://podcasts.apple.com/us/podcast/ai-i/id1719789201",
+    "apple_podcasts_status": "200 OK — confirmed live; 116 episodes as of June 2026",
+    "spotify": "https://open.spotify.com/show/5qX1nRTaFsfWdmdj5JWO1G",
+    "spotify_status": "200 OK — confirmed live",
+    "every_author": "https://every.to/@danshipper",
+    "every_author_status": "200 OK — confirmed live",
+    "substack": "https://danshipper.substack.com",
+    "substack_status": "200 OK — confirmed live (redirects to Every Substack)",
+    "youtube_every": "https://www.youtube.com/@EveryInc",
+    "youtube_every_status": "200 OK — confirmed live; Every's official YouTube channel",
+    "youtube_danshipper": "https://www.youtube.com/@danshipper",
+    "youtube_danshipper_status": "404 NOT FOUND — no personal YouTube channel at this handle"
+  },
+  "unverified_items": [
+    "Dan Shipper's personal blog start year: site says '2010' but earliest archived posts are from February 2011. Use 'since 2010' as his own claim.",
+    "Whether Patrick Leahy remained a co-founder through the Pegasystems acquisition (most sources only name Shipper and Meltzer).",
+    "Exact overlap/sequence of Prehype EIR and First Round Product Co-Op roles (both circa 2018-2019).",
+    "Whether Firefly was founded during Dan's sophomore or junior year — sources indicate junior year (he started at Penn fall 2010, PennApps was January 2012 = sophomore year by calendar but junior in academic year if he took gap time). Inc. 2013 article describes him as 'in his junior year' at time of article; founding was January 2012 which was his sophomore spring. This remains ambiguous.",
+    "Any personal YouTube channel for Dan Shipper (@danshipper returns 404).",
+    "Forbes 30 Under 30 recognition — not found; keep off site.",
+    "Books published by Dan Shipper — none found.",
+    "The 'yourparade.com' domain in connection with the 2017 telethon — cannot confirm; the event's official name was 'Stand Up For Love: A Love-A-Thon.'"
+  ]
+}

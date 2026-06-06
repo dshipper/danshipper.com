@@ -1,0 +1,36 @@
+# Dan Shipper
+
+> Dan Shipper is the co-founder and CEO of Every (every.to), a media and software company in New York City that explores what AI means for how we work and think. He writes Chain of Thought, a weekly column about AI read by more than 100,000 people, and hosts AI & I, a podcast about how the smartest people in the world use AI. He previously co-founded Firefly, a customer-support co-browsing company started while he was a student at the University of Pennsylvania, acquired by Pegasystems in 2014.
+
+Key facts:
+- Role: Co-founder & CEO, Every (every.to). Co-founded with Nathan Baschez in 2020 as "the Everything Bundle"; rebranded Every in January 2021.
+- Writes: Chain of Thought (since 2022) — https://every.to/chain-of-thought. Before that: Superorganizers (since 2019).
+- Hosts: AI & I — https://every.to/podcast (launched November 2023 as "How Do You Use ChatGPT?", renamed May 2024; 116+ episodes). Apple: https://podcasts.apple.com/us/podcast/ai-i/id1719789201 · Spotify: https://open.spotify.com/show/5qX1nRTaFsfWdmdj5JWO1G
+- Every builds: Cora (AI email assistant, cora.computer), Sparkle (file organization, makeitsparkle.co), Spiral (AI writing, writewithspiral.com), Monologue (voice dictation, monologue.to), Proof (collaborative editor for humans and AI, proofeditor.ai), Plus One (AI agent in Slack, every.to/plus-one); runs Every Studio (product incubator, launched October 2024) and an AI training/consulting practice.
+- Every's newsletter is read by 100,000+ founders, operators, and investors. Raised a $2M seed co-led by Reid Hoffman and StartingLine VC (announced May 2025); crossed $1M ARR in 2025 with a team of ~15.
+- Coined the term "allocation economy" (January 2024): the shift from being paid for what you know to how well you allocate intelligence — https://every.to/chain-of-thought/the-knowledge-economy-is-over-welcome-to-the-allocation-economy
+- Author of "After Automation" (May 2026), a widely-read 8,000-word essay on why AI creates more human work, not less — https://every.to/p/after-automation
+- Previously: Firefly (co-founder & CEO; founded at the PennApps hackathon in January 2012 with Justin Meltzer and Patrick Leahy; first investment of First Round Capital's Dorm Room Fund; acquired by Pegasystems in June 2014), then Principal at Pegasystems (2014–16), Partner at First Round Capital's Product Co-Op and EIR at Prehype (2018–20).
+- Gave a TED Talk, "The unexpected key to boosting your productivity" (2023) — https://www.ted.com/speakers/dan_shipper
+- Co-organized "Stand Up for Love," an Inauguration Day telethon (January 2017) that raised $200,000 for the ACLU, Planned Parenthood, and Earthjustice, with 60+ celebrities and 1.5M viewers.
+- Education: University of Pennsylvania, bachelor's degree in philosophy (2014).
+- Blogged at danshipper.com 2010–2016 (700,000+ readers, per his site); the full archive is preserved at https://danshipper.com/archive
+- Location: New York City
+- Contact: @danshipper on X · https://x.com/danshipper
+
+## Pages
+
+- [Home](https://danshipper.com/): who Dan is, selected writing, podcast, timeline, FAQ
+- [Press & coverage](https://danshipper.com/press): articles, profiles, and interviews about Dan, 2011–2026
+- [Blog archive](https://danshipper.com/archive): every post from the 2011–2016 startup blog
+- [Full content for LLMs](https://danshipper.com/llms-full.txt)
+
+## Elsewhere
+
+- [Every author page](https://every.to/@danshipper)
+- [X / Twitter](https://x.com/danshipper)
+- [LinkedIn](https://www.linkedin.com/in/danshipper/)
+- [GitHub](https://github.com/dshipper)
+- [TED](https://www.ted.com/speakers/dan_shipper)
+- [Substack](https://danshipper.substack.com)
+- [YouTube (Every)](https://www.youtube.com/@EveryInc)

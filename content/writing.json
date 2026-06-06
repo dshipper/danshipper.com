@@ -1,0 +1,103 @@
+{
+  "compiled_at": "2026-06-06",
+  "essays": [
+    {
+      "title": "After Automation",
+      "url": "https://every.to/p/after-automation",
+      "date": "2026-05-21",
+      "publication": "Chain of Thought",
+      "note": "We automated almost everything at Every—and tripled our headcount. An 8,000-word essay on why AI creates more human work, not less.",
+      "verified": true
+    },
+    {
+      "title": "The Knowledge Economy Is Over. Welcome to the Allocation Economy.",
+      "url": "https://every.to/chain-of-thought/the-knowledge-economy-is-over-welcome-to-the-allocation-economy",
+      "date": "2024-01-19",
+      "publication": "Chain of Thought",
+      "note": "In the age of AI, every maker becomes a manager. The essay that coined the term “allocation economy.”",
+      "verified": true
+    },
+    {
+      "title": "Why Generalists Own the Future",
+      "url": "https://every.to/chain-of-thought/why-generalists-own-the-future-e695c27f-b6f0-447b-bcd4-e5e144439693",
+      "date": "2025-03-28",
+      "publication": "Chain of Thought",
+      "note": "In the age of AI, it’s better to know a little about a lot than a lot about a little.",
+      "verified": true
+    },
+    {
+      "title": "GPT-4 Is a Reasoning Engine",
+      "url": "https://every.to/chain-of-thought/gpt-4-is-a-reasoning-engine",
+      "date": "2023-03-31",
+      "publication": "Chain of Thought",
+      "note": "Reason is only as good as the information we give it—an early framework for thinking about what LLMs actually are.",
+      "verified": true
+    },
+    {
+      "title": "The End of Organizing",
+      "url": "https://every.to/chain-of-thought/the-end-of-organizing",
+      "date": "2023-01-05",
+      "publication": "Chain of Thought",
+      "note": "How AI will turn your notes into an actual second brain—and why organizing information is over.",
+      "verified": true
+    },
+    {
+      "title": "Admitting What Is Obvious",
+      "url": "https://every.to/chain-of-thought/admitting-what-is-obvious",
+      "date": "2023-09-07",
+      "publication": "Chain of Thought",
+      "note": "“I’m a writer—what are you?” On finally claiming an identity you’ve been living all along.",
+      "verified": true
+    },
+    {
+      "title": "ChatGPT and the Future of the Human Mind",
+      "url": "https://every.to/chain-of-thought/chatgpt-and-the-future-of-the-human-mind",
+      "date": "2024-01-11",
+      "publication": "Chain of Thought",
+      "note": "AI is a lever that becomes a lens—on what chatbots reveal about how we think.",
+      "verified": true
+    },
+    {
+      "title": "The Fall of Roam",
+      "url": "https://every.to/superorganizers/the-fall-of-roam",
+      "date": "2022-02-11",
+      "publication": "Superorganizers",
+      "note": "“I don’t use Roam anymore. Why?” A reckoning with the tools-for-thought hype cycle, before AI changed the answer.",
+      "verified": true
+    }
+  ],
+  "podcast": {
+    "name": "AI & I",
+    "url": "https://every.to/podcast",
+    "apple": "https://podcasts.apple.com/us/podcast/ai-i/id1719789201",
+    "spotify": "https://open.spotify.com/show/5qX1nRTaFsfWdmdj5JWO1G",
+    "youtube": "https://www.youtube.com/@EveryInc",
+    "blurb": "Conversations about how the smartest people in the world use AI to think, create, and build.",
+    "notable_episodes": [
+      {
+        "title": "We Automated Everything With AI and Tripled Our Headcount",
+        "url": "https://every.to/podcast/transcript-we-automated-everything-with-ai-and-tripled-our-headcount",
+        "date": "2026-05",
+        "note": "On the viral essay “After Automation”"
+      },
+      {
+        "title": "Investing Secrets from Silicon Valley’s Best VCs",
+        "url": "https://every.to/podcast/silicon-valley-s-best-vcs-on-what-comes-next",
+        "date": "2025-08",
+        "note": "With Sarah Tavel, Mike Maples, and Nabeel Hyatt"
+      },
+      {
+        "title": "We Interviewed New Jersey Governor Phil Murphy About AI",
+        "url": "https://every.to/podcast/we-interviewed-new-jersey-governor-phil-murphy-about-ai",
+        "date": "2025-03",
+        "note": "How a US state actually adopts AI"
+      },
+      {
+        "title": "Can AI Solve the Adult Friendship Problem?",
+        "url": "https://every.to/podcast/inside-the-pod-can-chatbots-fill-the-void-of-adult-loneliness",
+        "date": "2024-08",
+        "note": "With New York Times columnist Kevin Roose"
+      }
+    ]
+  }
+}

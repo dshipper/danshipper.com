@@ -1,0 +1,30 @@
+{
+  "$schema": "https://openapi.vercel.sh/vercel.json",
+  "buildCommand": "node scripts/build.mjs",
+  "outputDirectory": "dist",
+  "cleanUrls": true,
+  "trailingSlash": false,
+  "redirects": [
+    { "source": "/about", "destination": "/", "permanent": true },
+    { "source": "/contact", "destination": "/", "permanent": true },
+    { "source": "/hi", "destination": "/", "permanent": true },
+    { "source": "/hey-there", "destination": "/", "permanent": true },
+    { "source": "/blog", "destination": "/archive", "permanent": true },
+    { "source": "/archives", "destination": "/archive", "permanent": true },
+    { "source": "/feed", "destination": "/archive", "permanent": true },
+    { "source": "/category/:path*", "destination": "/archive", "permanent": true },
+    { "source": "/tag/:path*", "destination": "/archive", "permanent": true },
+    { "source": "/author/:path*", "destination": "/", "permanent": true },
+    { "source": "/page/:path*", "destination": "/archive", "permanent": true }
+  ],
+  "headers": [
+    {
+      "source": "/fonts/(.*)",
+      "headers": [{ "key": "Cache-Control", "value": "public, max-age=31536000, immutable" }]
+    },
+    {
+      "source": "/wp-content/(.*)",
+      "headers": [{ "key": "Cache-Control", "value": "public, max-age=31536000, immutable" }]
+    }
+  ]
+}
