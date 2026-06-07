@@ -277,7 +277,7 @@ if (pressItems.length) {
   <section>
     <h2>${year}</h2>
     <ul class="ledger press">
-${items.map(i => `      <li><span class="when">${esc(fmtMonthYear(i.date))}</span><span class="what"><span class="outlet"><span class="m-when" aria-hidden="true">${esc(fmtMonthYear(i.date))} · </span>${esc(i.outlet)}</span><a href="${attr(i.url)}">${esc(i.title)}</a>${i.note ? `<span class="note">${esc(i.note)}</span>` : ""}</span></li>`).join("\n")}
+${items.map(i => `      <li><span class="when">${esc(fmtMonthYear(i.date))}</span><span class="what"><span class="outlet"><span class="m-when" aria-hidden="true">${esc(fmtMonthYear(i.date))} · </span>${esc(i.outlet)}</span><a href="${attr(i.url)}">${esc(i.title)}</a></span></li>`).join("\n")}
     </ul>
   </section>`).join("\n");
   pressPage = pressPage.replace("<!--PRESS_LIST-->", sections);
