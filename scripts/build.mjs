@@ -231,7 +231,7 @@ let home = fs.readFileSync(path.join(DIST, "index.html"), "utf8");
 
 if (writing?.essays) {
   home = home.replace("<!--WRITING_LIST-->", writing.essays.map(e =>
-    `<li><span class="when">${fmtMonthYear(e.date)}</span><span class="what"><a href="${attr(e.url)}">${esc(e.title)}</a><span class="note">${esc(e.note)}</span></span></li>`
+    `<li><span class="when">${fmtMonthYear(e.date)}</span><span class="what"><a href="${attr(e.url)}">${esc(e.title)}</a></span></li>`
   ).join("\n      "));
 }
 if (writing?.podcast?.notable_episodes) {
@@ -310,7 +310,7 @@ fs.writeFileSync(path.join(DIST, "sitemap.xml"), sitemap);
 const llmsFull = [
   fs.readFileSync(path.join(SITE, "llms.txt"), "utf8"),
   "\n## Selected writing (full list)\n",
-  ...(writing?.essays || []).map(e => `- [${decode(e.title)}](${e.url}) (${e.date}) — ${e.note}`),
+  ...(writing?.essays || []).map(e => `- [${decode(e.title)}](${e.url}) (${e.date})`),
   "\n## Notable AI & I episodes\n",
   ...(writing?.podcast?.notable_episodes || []).map(e => `- [${decode(e.title)}](${e.url}) (${e.date}) — ${e.note}`),
   "\n## Timeline\n",
