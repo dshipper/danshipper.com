@@ -1,6 +1,16 @@
 {
-  "compiled_at": "2026-08-02",
+  "compiled_at": "2026-08-06",
   "items": [
+    {
+      "date": "2026-08-06",
+      "outlet": "Axios",
+      "title": "Google's AI leadership shuffle",
+      "url": "https://www.axios.com/2026/08/06/googles-ai-leadership-shuffle",
+      "type": "article",
+      "note": "Dan quoted on Google's need to catch up on frontier coding while Demis Hassabis prioritizes longer-term research directions such as world models.",
+      "highlight": true,
+      "url_ok": true
+    },
     {
       "date": "2026-07-31",
       "outlet": "The Wall Street Journal",
