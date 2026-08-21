@@ -1,7 +1,7 @@
 ---
 title: "feat: Add Platformer interview to press coverage"
 type: feat
-status: active
+status: completed
 date: 2026-08-21
 ---
 
@@ -87,7 +87,7 @@ The Platformer interview is published but absent from Dan's personal site. The s
 
   **Verification:** The generated homepage and press page both contain the exact Platformer headline and destination URL, and the site verifier passes.
 
-- [ ] **Unit 2: Verify and publish the rendered site**
+- [x] **Unit 2: Verify and publish the rendered site**
 
   **Goal:** Ensure the entry is visibly correct and available on production.
 
