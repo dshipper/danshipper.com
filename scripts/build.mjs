@@ -311,7 +311,7 @@ const llmsFull = [
   fs.readFileSync(path.join(SITE, "llms.txt"), "utf8"),
   "\n## Selected writing (full list)\n",
   ...(writing?.essays || []).map(e => `- [${decode(e.title)}](${e.url}) (${e.date})`),
-  "\n## Notable AI & I episodes\n",
+  "\n## Notable The Every Podcast episodes\n",
   ...(writing?.podcast?.notable_episodes || []).map(e => `- [${decode(e.title)}](${e.url}) (${e.date}) — ${e.note}`),
   "\n## Timeline\n",
   ...(timeline?.items || []).map(t => `- ${t.when}: ${t.what}`),
