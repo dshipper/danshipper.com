@@ -88,7 +88,7 @@
     {
       "topic": "every_dan_title",
       "claim": "Dan Shipper's current title is Co-founder and CEO of Every.",
-      "source_url": "https://every.to/@danshipper",
+      "source_url": "https://every.to/@danshipper?sort=newest",
       "confidence": "high",
       "notes": "Consistent across all sources."
     },
@@ -232,7 +232,7 @@
     "apple_podcasts_status": "200 OK — confirmed live; 116 episodes as of June 2026",
     "spotify": "https://open.spotify.com/show/5qX1nRTaFsfWdmdj5JWO1G",
     "spotify_status": "200 OK — confirmed live",
-    "every_author": "https://every.to/@danshipper",
+    "every_author": "https://every.to/@danshipper?sort=newest",
     "every_author_status": "200 OK — confirmed live",
     "substack": "https://danshipper.substack.com",
     "substack_status": "200 OK — confirmed live (redirects to Every Substack)",

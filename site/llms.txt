@@ -36,7 +36,7 @@ Key facts:
 
 ## Elsewhere
 
-- [Every author page](https://every.to/@danshipper)
+- [Every author page](https://every.to/@danshipper?sort=newest)
 - [X / Twitter](https://x.com/danshipper)
 - [LinkedIn](https://www.linkedin.com/in/danshipper/)
 - [GitHub](https://github.com/dshipper)
