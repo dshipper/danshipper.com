@@ -6,13 +6,16 @@ import fs from "node:fs";
 import path from "node:path";
 import crypto from "node:crypto";
 import { fileURLToPath } from "node:url";
+import { SHELF_URL, SHELF_IS_PUBLISHED, sourceCover, publishedCover, validateShelf, listedOn, bookshopUrl, thumbOf, emptiedUnasked, revisionOf } from "./shelf.mjs";
 
 const ROOT = path.resolve(path.dirname(fileURLToPath(import.meta.url)), "..");
 const SITE = path.join(ROOT, "site");
 const DIST = path.join(ROOT, "dist");
 const CONTENT = path.join(ROOT, "content");
 const ASSET_CACHE = path.join(CONTENT, "wp-assets");
+const COVER_CACHE = path.join(ROOT, ".books-cache", "covers");
 const ORIGIN = "https://danshipper.com";
+const ON_VERCEL = !!process.env.VERCEL;
 
 const readJSON = (f, fallback = null) => {
   try { return JSON.parse(fs.readFileSync(path.join(CONTENT, f), "utf8")); }
@@ -47,11 +50,16 @@ const decode = s => String(s)
   .replace(/&#8221;|&rdquo;/g, "”").replace(/&#8211;|&ndash;/g, "–")
   .replace(/&#8212;|&mdash;/g, "—").replace(/&#038;/g, "&").replace(/&#8230;|&hellip;/g, "…");
 
+// Text from the reading shelf is shown exactly as written: escape everything, decode nothing.
+const escText = s => String(s)
+  .replace(/&/g, "&amp;").replace(/</g, "&lt;").replace(/>/g, "&gt;").replace(/"/g, "&quot;");
+
 const MONTHS = ["Jan","Feb","Mar","Apr","May","Jun","Jul","Aug","Sep","Oct","Nov","Dec"];
 const fmtMonthYear = iso => {
   const m = String(iso).match(/^(\d{4})-(\d{2})/);
   return m ? `${MONTHS[+m[2] - 1]} ${m[1]}` : String(iso);
 };
+const fmtDay = iso => `${+String(iso).slice(8, 10)} ${fmtMonthYear(iso)}`;
 const yearOf = iso => String(iso).slice(0, 4);
 
 const writeFile = (p, body) => {
@@ -96,6 +104,148 @@ async function mirrorAssets() {
   await Promise.all(workers);
   return { total: refs.length, downloaded, cached, failed };
 }
+
+// ---------- reading shelf ----------
+// The books come from Marginalia, Dan's private reading library, through one public
+// endpoint that carries only what is public there. Every deploy reads it live. Nothing
+// of it is committed (this repository is public and its history is forever: see
+// shelf.mjs); the repository holds only content/books.revision, the shelf's revision,
+// which .github/workflows/books-shelf.yml updates when the shelf changes, and that commit
+// is what redeploys the site. A local build keeps the last shelf it fetched in
+// .books-cache/ (gitignored) so it can run without the network.
+// The shelf may also carry passages Dan published; this site shows none of them for now.
+//   BOOKS_OFFLINE=1       build from the copy in .books-cache/ and fetch nothing (only "1"
+//                         counts; a machine that never fetched the shelf has no copy)
+//   BOOKS_PREVIEW=<file>  build from a local shelf file, covers in covers/ beside it
+//                         (for design work; refused on Vercel, never kept)
+const SHELF_CACHE = path.join(ROOT, ".books-cache", "shelf.json");
+const BUILT_FROM = path.join(ROOT, ".books-cache", "built-from.json"); // the shelf this dist/ was built from, for check.mjs
+const recordedRevision = () => { try { return fs.readFileSync(path.join(CONTENT, "books.revision"), "utf8").trim() || null; } catch { return null; } };
+
+async function loadShelf() {
+  const valid = (shelf, from, coverOk = sourceCover) => {
+    const errs = validateShelf(shelf, coverOk);
+    if (errs.length) throw new Error(`${from} is not a valid shelf:\n  ${errs.slice(0, 10).join("\n  ")}`);
+    return shelf;
+  };
+  const cached = () => {
+    if (!fs.existsSync(SHELF_CACHE)) throw new Error("there is no copy of the shelf on this machine (.books-cache/shelf.json is written by a build that reached it)");
+    return valid(JSON.parse(fs.readFileSync(SHELF_CACHE, "utf8")), ".books-cache/shelf.json", publishedCover);
+  };
+
+  if (process.env.BOOKS_PREVIEW) {
+    if (ON_VERCEL) throw new Error("BOOKS_PREVIEW is for local design work and must not be set on Vercel");
+    console.warn(`WARN: PREVIEW shelf from ${process.env.BOOKS_PREVIEW} — this dist/ is not for deploy`);
+    return { shelf: valid(JSON.parse(fs.readFileSync(process.env.BOOKS_PREVIEW, "utf8")), "BOOKS_PREVIEW"), source: "preview" };
+  }
+  if (process.env.BOOKS_OFFLINE === "1") {
+    console.warn("WARN: BOOKS_OFFLINE — shelf from .books-cache/, which may be behind what Dan has published or withdrawn");
+    return { shelf: cached(), source: "snapshot" };
+  }
+  let shelf;
+  try {
+    const res = await fetch(SHELF_URL, { cache: "no-store", signal: AbortSignal.timeout(8000) });
+    if (!res.ok) throw new Error(`HTTP ${res.status}`);
+    shelf = valid(await res.json(), SHELF_URL);
+  } catch (e) {
+    // A stale copy could list a book Dan has since made private, so a deploy stops here
+    // and the last good one stays live.
+    if (ON_VERCEL) throw new Error(`could not load the reading shelf: ${e.message}`);
+    if (fs.existsSync(SHELF_CACHE)) {
+      console.warn(`WARN: could not load the reading shelf: ${e.message}\n      using the copy in .books-cache/ instead`);
+      return { shelf: cached(), source: "snapshot" };
+    }
+    // A machine that has never reached the shelf can still build the rest of the site.
+    console.warn(`WARN: could not load the reading shelf: ${e.message}\n      and there is no copy on this machine: building WITHOUT books — this dist/ is not for deploy`);
+    const none = { books: [], quotes: [], lately: [] };
+    return { shelf: { schema: 2, generated_at: new Date().toISOString().replace(/\.\d+Z$/, "Z"), revision: revisionOf(none), ...none }, source: "none" };
+  }
+  // A shelf that had books and now has none: not built, here or on Vercel, until the empty
+  // revision has been recorded on purpose (see emptiedUnasked in shelf.mjs).
+  if (SHELF_IS_PUBLISHED && emptiedUnasked(shelf, recordedRevision())) {
+    throw new Error("the reading shelf is empty, but the revision recorded in content/books.revision is of a shelf with books.\n"
+      + "If the list was taken down on purpose: Actions → Books shelf → Run workflow with allow_empty, which records the empty shelf and redeploys.\n"
+      + "If not: Marginalia is answering with nothing (its PUBLIC_BOOKS switch?). The last deploy stays live meanwhile.");
+  }
+  // Only the published endpoint's answer is kept (a local Marginalia can hold test publishes).
+  if (!ON_VERCEL) {
+    if (!SHELF_IS_PUBLISHED) console.warn("WARN: MARGINALIA_SHELF_URL is set — nothing is remembered from this shelf");
+    else writeFile(SHELF_CACHE, JSON.stringify(shelf, null, 2) + "\n");
+  }
+  return { shelf, source: "live" };
+}
+
+// Width and height read from the JPEG itself, so <img> attributes describe the file served.
+const jpegSize = buf => {
+  if (buf[0] !== 0xff || buf[1] !== 0xd8) return null;
+  for (let i = 2; i + 9 < buf.length; i += 2 + buf.readUInt16BE(i + 2)) {
+    if (buf[i] !== 0xff) return null;
+    const marker = buf[i + 1];
+    if (marker >= 0xc0 && marker <= 0xcf && ![0xc4, 0xc8, 0xcc].includes(marker)) {
+      return { width: buf.readUInt16BE(i + 7), height: buf.readUInt16BE(i + 5) };
+    }
+  }
+  return null;
+};
+
+// Covers are copied into the site so no page loads anything from Marginalia, and
+// published under a content hash, so /books/covers/ can be cached forever. Two sizes:
+// every book's cover as a thumb for the year lists (the smallest copy the shelf
+// serves: several hundred of them are on one page), and the small cover of the few
+// books in the row at the top. A live build always refetches them (the shelf carries
+// no hash to tell a replaced or withdrawn cover from a kept one) and leaves a copy in
+// .books-cache/ (gitignored) for builds from the snapshot. A cover that cannot be had
+// is not fatal: the page typesets a stand-in.
+async function mirrorCovers(books, featured, source) {
+  const preview = source === "preview";
+  const dir = preview ? path.join(path.dirname(process.env.BOOKS_PREVIEW), "covers") : COVER_CACHE;
+  const covers = new Map(); // book id -> { thumb?, small? }, each { src, width, height }
+  const failed = [];
+  const fetched = async url => {
+    for (let attempt = 0; ; attempt++) {
+      try {
+        const res = await fetch(url, { signal: AbortSignal.timeout(8000) });
+        if (!res.ok) throw new Error(`HTTP ${res.status}`);
+        return Buffer.from(await res.arrayBuffer());
+      } catch (e) {
+        if (attempt >= 1) throw e; // one more try: several hundred requests go out in a row
+      }
+    }
+  };
+  const queue = [
+    ...books.filter(b => b.cover).map(b => ({ b, size: "thumb" })),
+    ...featured.filter(b => b.cover).map(b => ({ b, size: "small" })),
+  ];
+  await Promise.all(Array.from({ length: 8 }, async () => {
+    while (queue.length) {
+      const { b, size } = queue.shift();
+      // a preview keeps one file per book; the cache keeps both sizes
+      const cached = path.join(dir, size === "thumb" && !preview ? `${b.id}.t.jpg` : `${b.id}.jpg`);
+      try {
+        let buf;
+        if (source === "live") buf = await fetched(size === "thumb" ? thumbOf(b.cover.url) : b.cover.url);
+        else if (fs.existsSync(cached)) buf = fs.readFileSync(cached);
+        else throw new Error("not in the cache");
+        const dims = jpegSize(buf);
+        if (!dims) throw new Error("not a JPEG");
+        if (source === "live") writeFile(cached, buf);
+        const name = `${b.id}-${crypto.createHash("sha1").update(buf).digest("hex").slice(0, 8)}.jpg`;
+        writeFile(path.join(DIST, "books", "covers", name), buf);
+        if (!covers.has(b.id)) covers.set(b.id, {});
+        covers.get(b.id)[size] = { src: `/books/covers/${name}`, ...dims };
+      } catch (e) {
+        failed.push(`${b.id} ${size} (${e.message})`);
+      }
+    }
+  }));
+  return { covers, failed };
+}
+
+// Loaded before dist/ is touched: if a deploy has to stop, it stops with nothing half-built.
+const { shelf, source: shelfSource } = await loadShelf().catch(e => {
+  console.error(`ERROR: ${e.message}`);
+  process.exit(1);
+});
 
 // ---------- page shell for archive ----------
 const shell = ({ title, description, canonicalPath, dateLabel, bodyHtml, isPage }) => `<!doctype html>
@@ -261,6 +411,51 @@ if (pressItems.length) {
   home = home.replace("<!--PRESS_HIGHLIGHTS-->", `<li><span class="when">—</span><span class="what">Press list compiling…</span></li>`);
   console.warn("WARN: content/press.json missing or empty — homepage press section is a placeholder");
 }
+
+// The shelf in the order it is listed: newest first. Every book has a date (the shelf
+// promises it and validateShelf checks): when Dan finished it if he said so, otherwise
+// the month of his most recent photo of it. Marginalia already sends the books newest
+// first, by the day; the sort here is stable, so that order survives within a month.
+// Shelf text goes in through a function: a "$" in a replacement string is a pattern.
+const books = [...shelf.books].sort((a, b) => listedOn(b).slice(0, 7).localeCompare(listedOn(a).slice(0, 7)));
+const hasShelf = books.length > 0; // an empty shelf is linked from nowhere
+const monthOf = b => (/^\d{4}-\d{2}/.test(listedOn(b)) ? listedOn(b).slice(0, 7) : "");
+const byline = b => escText(b.authors.join(", "));
+
+// "Lately": nobody marks a book as being read; what is known is when Dan last
+// photographed it. So the row at the top is the books photographed this month or last
+// (as of the shelf's own date), with any he did mark "reading" first. Four of them: one
+// row of covers, then the list, which is the page.
+const shelfMonth = shelf.generated_at.slice(0, 7);
+const monthBefore = ym => { const [y, m] = ym.split("-").map(Number); return m === 1 ? `${y - 1}-12` : `${y}-${String(m - 1).padStart(2, "0")}`; };
+const recent = b => b.last_photo !== null && b.last_photo >= monthBefore(shelfMonth);
+// Which books may be featured at all (here and on the home page) is the shelf's to say:
+// `lately` lists them. A book that is not in it keeps its place in its month's list and
+// is simply never featured. (A shelf without the list features by date alone.)
+const featurable = Array.isArray(shelf.lately) ? new Set(shelf.lately) : null;
+const mayFeature = b => !featurable || featurable.has(b.id);
+const lately = [...books.filter(b => b.status === "reading"), ...books.filter(b => b.status !== "reading" && recent(b))].filter(mayFeature).slice(0, 4);
+
+const FAV = `<span class="fav" title="A favorite">*</span>`;
+
+// Home: the four most recent books, under the same name as on /books ("Lately": the
+// page knows when a book was last photographed, not whether it is being read). A book set
+// aside is left out, and the favorite mark is explained only on /books, so neither shows
+// here. The marker's own blank line goes with it: with no books the home page is byte for
+// byte what it was.
+const homeBooks = [...books.filter(b => b.status === "reading"), ...books.filter(b => !["reading", "paused", "abandoned"].includes(b.status))].filter(mayFeature).slice(0, 4);
+const homeRow = b =>
+  `<li><span class="when">${b.status === "reading" ? "Now" : fmtMonthYear(listedOn(b))}</span><span class="what"><cite>${escText(b.title)}</cite>${b.authors.length ? `<span class="note">${byline(b)}</span>` : ""}</span></li>`;
+home = home.replace(/[ \t]*<!--READING_SECTION-->\n*/, () => homeBooks.length ? `  <section id="reading" aria-labelledby="reading-heading">
+    <h2 id="reading-heading">Books, lately</h2>
+    <ul class="ledger">
+      ${homeBooks.map(homeRow).join("\n      ")}
+    </ul>
+    <p class="small" style="margin-top:1rem">The rest of the shelf is on the <a href="/books">books page</a>.</p>
+  </section>
+
+` : "");
+home = home.replace("<!--BOOKS_LINK-->", () => hasShelf ? `<a href="/books">Books</a> · ` : "");
 fs.writeFileSync(path.join(DIST, "index.html"), home);
 
 // 5) press page
@@ -298,7 +493,131 @@ fs.writeFileSync(path.join(DIST, "press", "index.html"), pressPage);
 urls.push({ loc: "/press", lastmod: "2026-06-06" });
 urls.push({ loc: "/", lastmod: "2026-06-06" });
 
-// 6) sitemap
+// 6) books page: one line on where the list comes from, a row of years to jump by,
+// the books photographed lately (with covers), then every year that has books, newest
+// first, each book with its cover and a link to Bookshop.org. All of it is on one page:
+// the list is the content, so it is at one address, findable in the page, and whole
+// without script. An empty shelf still gets a page, so /books and the redirects to it
+// never 404, but it says so plainly, asks not to be indexed, and stays out of the home
+// page, sitemap and llms.txt. Passages are not shown, whatever the shelf carries.
+const coverReport = await mirrorCovers(books, lately, shelfSource);
+const { covers } = coverReport;
+const plural = (n, one) => `${n.toLocaleString("en-US")} ${one}${n === 1 ? "" : "s"}`;
+
+// A book with no cover gets a stand-in of the same size: the first letter of its title.
+const initial = b => escText((b.title.replace(/^(the|an?)\s+/i, "").match(/[\p{L}\p{N}]/u) || ["·"])[0].toUpperCase());
+// One link per book, around its cover, title and author: the whole row goes to Bookshop.
+const linked = (b, inner) => `<a class="book" href="${attr(bookshopUrl(b))}">${inner}</a>`;
+const titled = b => `<cite>${escText(b.title)}</cite>${b.favorite ? FAV : ""}`;
+
+const latelySection = lately.length ? `
+  <section id="lately">
+    <h2>Lately</h2>
+    <ul class="shelf">
+${lately.map(b => {
+  const c = covers.get(b.id)?.small;
+  const cover = c
+    ? `<img src="${c.src}" alt="" width="${c.width}" height="${c.height}" decoding="async">`
+    : `<span class="typeset" aria-hidden="true"><span>${escText(b.title)}</span><small>${byline(b)}</small></span>`;
+  return `      <li>${linked(b, `<span class="cover">${cover}</span>${titled(b)}${b.authors.length ? `<span class="by">${byline(b)}</span>` : ""}`)}</li>`;
+}).join("\n")}
+    </ul>
+  </section>` : "";
+
+// One section per year, newest first, down to the oldest year that has a book. The
+// gutter names the month once, where it starts; a date that is only a year leaves it
+// empty.
+const booksByYear = new Map();
+for (const b of books) {
+  const y = yearOf(listedOn(b));
+  if (!booksByYear.has(y)) booksByYear.set(y, []);
+  booksByYear.get(y).push(b);
+}
+const years = [...booksByYear.keys()]; // newest first, like the books
+const bookRow = (b, when) => {
+  const c = covers.get(b.id)?.thumb;
+  const cover = c
+    ? `<img src="${c.src}" alt="" width="${c.width}" height="${c.height}" loading="lazy" decoding="async">`
+    : `<span class="typeset" aria-hidden="true">${initial(b)}</span>`;
+  return `<li><span class="when">${when}</span>${linked(b, `<span class="cover">${cover}</span><span class="what">${titled(b)}${b.authors.length ? `<span class="note">${byline(b)}</span>` : ""}</span>`)}</li>`;
+};
+const yearSection = (year, i) => {
+  const list = booksByYear.get(year);
+  const newer = years[i - 1], older = years[i + 1];
+  const step = [
+    ...(newer ? [`<a href="#y${newer}" aria-label="Up to ${newer}">↑ ${newer}</a>`] : []),
+    ...(older ? [`<a href="#y${older}" aria-label="Down to ${older}">${older} ↓</a>`] : []),
+    `<a href="#years" aria-label="All years (from ${year})">All years</a>`,
+  ].join("");
+  return `
+  <section class="year" id="y${year}" aria-labelledby="h${year}">
+    <div class="year-head"><h2 id="h${year}">${year}</h2><span class="n">${plural(list.length, "book")}</span><span class="step">${step}</span></div>
+    <ul class="ledger books">
+${list.map((b, n) => {
+  const m = monthOf(b);
+  return "      " + bookRow(b, m && (n === 0 || monthOf(list[n - 1]) !== m) ? MONTHS[+m.slice(5) - 1] : "");
+}).join("\n")}
+    </ul>
+  </section>`;
+};
+const yearIndex = years.length > 1 ? `
+  <nav class="years" id="years" aria-label="Jump to a year">
+${years.map(y => `    <a href="#y${y}" aria-label="${y}, ${plural(booksByYear.get(y).length, "book")}">${y}<span>${booksByYear.get(y).length}</span></a>`).join("\n")}
+  </nav>` : "";
+const listSections = years.map(yearSection).join("\n");
+const summary = hasShelf
+  ? `<p class="small">${plural(books.length, "book")}${years.length > 1 ? `, ${years[years.length - 1]}–${years[0]}` : ""}, each under the month I last photographed it. Titles link to <a href="https://bookshop.org/">Bookshop.org</a>, which supports independent bookshops.</p>`
+  : "";
+
+const booksJsonld = {
+  "@context": "https://schema.org",
+  "@type": "ItemList",
+  "name": "Dan Shipper's reading shelf",
+  "description": "Books Dan Shipper has photographed while reading, by the month of the most recent photo. The list is created and maintained automatically by Claude and ChatGPT.",
+  "numberOfItems": books.length,
+  "itemListElement": books.map((b, idx) => ({
+    "@type": "ListItem", "position": idx + 1,
+    "item": { "@type": "Book", "name": b.title, ...(b.authors.length ? { "author": b.authors.map(a => ({ "@type": "Person", "name": a })) } : {}) }
+  })),
+};
+const footnotes = [
+  ...(books.some(b => b.favorite) ? [`<p>${FAV} A favorite.</p>`] : []),
+  ...(hasShelf ? [`<p>The shelf as of ${fmtDay(shelf.generated_at)}.</p>`] : []),
+].join("\n    ");
+
+let booksPage = fs.readFileSync(path.join(DIST, "books", "index.html"), "utf8");
+booksPage = booksPage
+  .replace("<!--BOOKS_HEAD-->", () => hasShelf
+    ? `<script type="application/ld+json">\n${JSON.stringify(booksJsonld).replace(/</g, "\\u003c")}\n</script>`
+    : `<meta name="robots" content="noindex">`)
+  .replace("<!--BOOKS_SUMMARY-->", () => summary)
+  .replace("<!--BOOKS_YEARS-->", () => yearIndex)
+  .replace("<!--BOOKS_LATELY-->", () => latelySection)
+  .replace("<!--BOOKS_LIST-->", () => hasShelf ? listSections : "<p>This shelf has not been published yet.</p>")
+  .replace("<!--BOOKS_FOOTNOTES-->", () => footnotes);
+fs.writeFileSync(path.join(DIST, "books", "index.html"), booksPage);
+
+// The shelf as built, for agents and for check.mjs: the books as listed, covers pointing
+// at the mirrored thumbs. No passages: this site publishes none for now.
+fs.writeFileSync(path.join(DIST, "books.json"), JSON.stringify({
+  ...shelf,
+  books: books.map(b => {
+    const c = covers.get(b.id)?.thumb;
+    return { ...b, cover: c ? { url: ORIGIN + c.src, width: c.width, height: c.height } : null, quotes: 0 };
+  }),
+  quotes: [],
+}, null, 2) + "\n");
+
+// ...and, outside dist/, the shelf it was built from, passages and all: check.mjs looks
+// for their text in everything that was built. Gitignored, like every copy of the shelf.
+writeFile(BUILT_FROM, JSON.stringify(shelf) + "\n");
+
+const llms = fs.readFileSync(path.join(DIST, "llms.txt"), "utf8").replace("<!--BOOKS_PAGE-->\n", () => hasShelf
+  ? `- [Books](${ORIGIN}/books): the books Dan has been reading, year by year since ${years[years.length - 1]}, from the photos he takes of them; the list is created and maintained automatically by Claude and ChatGPT\n` : "");
+fs.writeFileSync(path.join(DIST, "llms.txt"), llms);
+if (hasShelf) urls.push({ loc: "/books", lastmod: shelf.generated_at.slice(0, 10) });
+
+// 7) sitemap
 const sitemap = `<?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 ${urls.map(u => `  <url><loc>${ORIGIN}${u.loc}</loc><lastmod>${u.lastmod}</lastmod></url>`).join("\n")}
@@ -306,9 +625,11 @@ ${urls.map(u => `  <url><loc>${ORIGIN}${u.loc}</loc><lastmod>${u.lastmod}</lastm
 `;
 fs.writeFileSync(path.join(DIST, "sitemap.xml"), sitemap);
 
-// 7) llms-full.txt — the whole site as one markdown file for AI crawlers
+// 8) llms-full.txt — the whole site as one markdown file for AI crawlers
+const bookLine = b =>
+  `- ${b.title}${b.authors.length ? ` — ${b.authors.join(", ")}` : ""} (${fmtMonthYear(listedOn(b))})${b.favorite ? " — a favorite" : ""}`;
 const llmsFull = [
-  fs.readFileSync(path.join(SITE, "llms.txt"), "utf8"),
+  llms,
   "\n## Selected writing (full list)\n",
   ...(writing?.essays || []).map(e => `- [${decode(e.title)}](${e.url}) (${e.date})`),
   "\n## Notable The Every Podcast episodes\n",
@@ -317,18 +638,23 @@ const llmsFull = [
   ...(timeline?.items || []).map(t => `- ${t.when}: ${t.what}`),
   "\n## Press coverage\n",
   ...pressItems.map(i => `- ${i.date} — ${i.outlet}: [${decode(i.title)}](${i.url})`),
+  ...(hasShelf ? [
+    "\n## Books\n",
+    "Created and maintained automatically by Claude and ChatGPT from the photos Dan takes of what he is reading. Each book is listed under the month of his most recent photo of it.\n",
+    ...years.flatMap(y => [`\n### ${y}\n`, ...booksByYear.get(y).map(bookLine)]),
+  ] : []),
   "\n## Blog archive (2010–2016)\n",
   ...postEntries.map(e => `- ${String(e.date).slice(0, 10)} — [${decode(e.title)}](${ORIGIN}/${e.slug})`),
 ].join("\n");
 fs.writeFileSync(path.join(DIST, "llms-full.txt"), llmsFull);
 
-// 8) mirror wp assets into dist
+// 9) mirror wp assets into dist
 const assetReport = await mirrorAssets();
 if (fs.existsSync(ASSET_CACHE)) {
   fs.cpSync(ASSET_CACHE, DIST, { recursive: true });
 }
 
-// 9) cache-bust the stylesheet everywhere (browsers cache /styles.css across deploys)
+// 10) cache-bust the stylesheet everywhere (browsers cache /styles.css across deploys)
 const cssHash = crypto.createHash("sha1").update(fs.readFileSync(path.join(DIST, "styles.css"))).digest("hex").slice(0, 8);
 (function bust(dir) {
   for (const e of fs.readdirSync(dir, { withFileTypes: true })) {
@@ -345,6 +671,10 @@ const cssHash = crypto.createHash("sha1").update(fs.readFileSync(path.join(DIST,
 console.log(`posts: ${postEntries.length} archive pages`);
 console.log(`pages kept: ${keptPages.map(p => p.slug).join(", ") || "none"}`);
 console.log(`press items: ${pressItems.length}${press ? "" : " (press.json missing)"}`);
+const wideThumbs = [...covers.values()].filter(c => c.thumb && c.thumb.width > 200).length;
+console.log(`shelf (${shelfSource}): ${books.length} books in ${years.length} years (${years[years.length - 1] ?? "–"}–${years[0] ?? "–"}), ${lately.length} lately, ${covers.size} of ${books.filter(b => b.cover).length} covers mirrored, ${books.filter(b => !b.cover).length} books have none${shelf.quotes.length ? `, ${shelf.quotes.length} published passages not shown` : ""}${hasShelf ? "" : " — nothing published, /books is unlisted"}`);
+if (wideThumbs) console.log(`  ${wideThumbs} list covers are wider than 200px: the shelf has no thumb for them yet and served its 400px copy`);
+if (coverReport.failed.length) console.log("  covers typeset instead:\n  " + coverReport.failed.join("\n  "));
 console.log(`sitemap: ${urls.length} urls`);
 console.log(`assets: ${assetReport.total} referenced, ${assetReport.downloaded} downloaded, ${assetReport.cached} cached, ${assetReport.failed.length} failed`);
 if (assetReport.failed.length) console.log("  failed:\n  " + assetReport.failed.join("\n  "));
