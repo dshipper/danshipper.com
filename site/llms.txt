@@ -31,6 +31,7 @@ Key facts:
 
 - [Home](https://danshipper.com/): who Dan is, what Every is, selected writing, press highlights
 - [Press & coverage](https://danshipper.com/press): articles, profiles, and interviews about Dan, 2011–2026
+<!--BOOKS_PAGE-->
 - [Blog archive](https://danshipper.com/archive): every post from the 2011–2016 startup blog
 - [Full content for LLMs](https://danshipper.com/llms-full.txt)
 

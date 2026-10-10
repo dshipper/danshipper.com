@@ -3,3 +3,6 @@ node_modules/
 .DS_Store
 .vercel
 .essays-cache/
+.books-cache/
+# The reading shelf is never committed (see scripts/shelf.mjs): only its revision is.
+content/books.json

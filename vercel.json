@@ -15,7 +15,9 @@
     { "source": "/category/:path*", "destination": "/archive", "permanent": true },
     { "source": "/tag/:path*", "destination": "/archive", "permanent": true },
     { "source": "/author/:path*", "destination": "/", "permanent": true },
-    { "source": "/page/:path*", "destination": "/archive", "permanent": true }
+    { "source": "/page/:path*", "destination": "/archive", "permanent": true },
+    { "source": "/reading", "destination": "/books", "permanent": false },
+    { "source": "/library", "destination": "/books", "permanent": false }
   ],
   "headers": [
     {
@@ -24,6 +26,10 @@
     },
     {
       "source": "/wp-content/(.*)",
+      "headers": [{ "key": "Cache-Control", "value": "public, max-age=31536000, immutable" }]
+    },
+    {
+      "source": "/books/covers/(.*)",
       "headers": [{ "key": "Cache-Control", "value": "public, max-age=31536000, immutable" }]
     }
   ]
