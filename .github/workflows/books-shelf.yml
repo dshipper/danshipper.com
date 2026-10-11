@@ -1,0 +1,69 @@
+# Keeps /books current without anyone pressing anything.
+# A few times an hour: ask the public reading shelf for its revision; when it differs
+# from the one recorded in content/books.revision, commit the new revision to main.
+# That push is what makes Vercel rebuild and deploy the site. The Vercel build then
+# reads the live shelf itself and stops if it cannot, so nothing stale is ever deployed.
+#
+# The shelf itself is never committed: this repository is public and its history is
+# forever, so a committed copy would keep every book Dan later makes private. The one
+# file this job may change holds a hash and nothing else, and the commit message says
+# only that the shelf changed.
+#
+# It uses only this repository's own GITHUB_TOKEN (no other secret). Any change in the
+# working tree besides content/books.revision stops the job.
+name: Books shelf
+
+on:
+  schedule:
+    - cron: "7,27,47 * * * *"
+  workflow_dispatch:
+    inputs:
+      allow_empty:
+        description: "Accept an empty shelf (the whole list was taken down on purpose)"
+        type: boolean
+        default: false
+
+permissions:
+  contents: write
+
+concurrency:
+  group: books-shelf
+  cancel-in-progress: false
+
+jobs:
+  refresh:
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: main
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+      - name: Fetch the shelf and compare revisions
+        id: shelf
+        env:
+          ALLOW_EMPTY: ${{ inputs.allow_empty && '1' || '' }}
+        run: node scripts/refresh-shelf.mjs
+      - name: Commit the new revision
+        if: steps.shelf.outputs.changed == 'true'
+        run: |
+          # The recorded revision is the only file this job may change.
+          others="$(git status --porcelain | grep -v -E '^( M|\?\?) content/books\.revision$' || true)"
+          if [ -n "$others" ]; then
+            echo "::error::unexpected changes besides content/books.revision; nothing committed"
+            echo "$others"
+            exit 1
+          fi
+          # ...and it is one line: a sha256.
+          if ! grep -q -x -E '[0-9a-f]{64}' content/books.revision || [ "$(wc -l < content/books.revision)" -ne 1 ]; then
+            echo "::error::content/books.revision is not a single sha256; nothing committed"
+            exit 1
+          fi
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add content/books.revision
+          git commit --only content/books.revision -m "Reading shelf changed"
+          git pull --rebase origin main
+          git push origin HEAD:main
