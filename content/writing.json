@@ -2,6 +2,14 @@
   "compiled_at": "2026-06-06",
   "essays": [
     {
+      "title": "How Codex Happened",
+      "url": "https://every.to/p/how-codex-happened",
+      "date": "2026-10-15",
+      "publication": "Every",
+      "note": "Inside OpenAI’s comeback in coding, from a failed launch to the app that took over ChatGPT",
+      "verified": true
+    },
+    {
       "title": "After Automation",
       "url": "https://every.to/p/after-automation",
       "date": "2026-05-21",
